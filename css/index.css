@@ -1,0 +1,76 @@
+/* Géneral */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+    background-color: #f0f0f0; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* En-tête */
+header {
+    background-color: #fff; /* Couleur de fond de l'en-tête */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+#LogoSite {
+    max-width: 200px; /* Taille maximale du logo */
+}
+
+/* Contenu principal */
+main {
+    padding: 40px;
+    text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px; /* Espacement entre les titres */
+}
+
+/* Styles pour transformer un lien en bouton */
+a.bouton {
+    display: inline-block;
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #007bff; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
+}
+
+a.bouton:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+
+/* Footer */
+footer {
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte du footer */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0; /* Supprime le marging droit du dernier élément */
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
