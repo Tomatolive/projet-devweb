@@ -8,7 +8,7 @@
     <body>
         <header>
             <img src="img/logo.png" alt="Logo du site" id="LogoSite">
-            <h1>nom du site</h1>
+            <h1>StarLove</h1>
         </header>
 
         <main>    
