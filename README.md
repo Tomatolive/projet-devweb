@@ -18,18 +18,45 @@ localhost:8000/index.html
 
 ## Connexion
 
-Pour réussir à vous connecter, vous devez créer (dans le répertoire du projet) un fichier `temp.csv` qui va servir de base de donnée temporaire en stockant les informations des utilisateurs sous cette forme :  
+La connexion s'effectue par une requête à une base de donnée MySQL. Pour cela, il va falloir d'abord créer un nouveau profil MySQL puis charger la base de donnée.  
+
+### Création du profil
+
+Tout d'abord il vous faut vous connecter à MySQL, soit avec le profil root :  
 
 ```
-login;mdp;profil;nom;prenom
+$ sudo mysql -u root -p
 ```
 
-Un exemple que vous pouvez utiliser :  
+Ou avec le profil que vous aviez défini en cours de BDD, en ce qui me concerne la commande était la suivante :  
 
 ```
-admin;admin;admin;admin;admin
-oliviertamon;testmdp;utilisateur;tamon;olivier
-llaserathomas;testmdp;abonne;llasera;thomas
+$ sudo mysql -u thomas -p
 ```
 
-**Attention**, ne pushez pas le fichier `temp.csv` quand vous voulez commit vos modifications sur Github (n'incluez donc pas le fichier quand vous utilisez git add)  
+Une fois connecté dans MySQL, utilisez **EXACTEMENT** les commandes suivantes :  
+
+```
+CREATE USER 'devweb'@'localhost' IDENTIFIED BY '$iteDeR3nc0ntre';
+GRANT ALL PRIVILEGES ON *.* TO 'devweb'@'localhost';
+```
+
+Une fois cela fait, quittez le profil courant et relancez MySQL en utilisant le profil nouvellement créé :  
+
+```
+$ mysql -u devweb -p
+```
+
+Le mot de passe de ce profil est : `$iteDeR3nc0ntre`  
+Une fois la connexion effectuée, utiliser la requête suivante :  
+
+```
+source rencontre.sql;
+```
+
+### Utilisation de la BDD
+
+Le site web va se connecter automatiquement à la base de donnée pour effectuer des requêtes, de ce côté vous n'avez rien à faire.  
+Si vous avez besoin de faire des modifications sur les données de la BDD, merci de le faire en écrivant une requête dans le fichier `rencontre.sql`.  
+Aussi si vous faites une modification à la BDD, merci de le signaler aux autres afin que l'on puisse mettre à jour la BDD.  
+Pour mettre à jour la BDD, connectez vous à MySQL en utilisant le profil `devweb` et utilisez la requête `source rencontre.sql;`.  
