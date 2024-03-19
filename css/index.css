@@ -1,29 +1,33 @@
-/* Géneral */
+/* ------------------------------------------------Géneral------------------------------------------- */
 body {
     font-family: Arial, sans-serif; /* Police de caractères par défaut */
-    background-color: #f0f0f0; /* Couleur de fond */
     color: #333; /* Couleur du texte */
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-/* En-tête */
+/* ----------------------------------------------------header------------------------------------ */
 header {
-    background-color: #fff; /* Couleur de fond de l'en-tête */
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20200807/pngtree-purple-dark-nebula-galaxy-background-image_386049.jpg'); /* Chemin de l'image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    height: 220px; /* Hauteur de votre header */
+    color: #ffffff; /* Couleur du texte */
 }
 
 #LogoSite {
-    max-width: 200px; /* Taille maximale du logo */
+    max-width: 150px; /* Taille maximale du logo */
 }
 
-/* Contenu principal */
+/* -------------------------------------------------------main------------------------------------------ */
 main {
     padding: 40px;
     text-decoration: none; /* Supprime le soulignement du lien */
+    text-align: center;
 }
 
 h1, h2, h3 {
@@ -34,7 +38,7 @@ h1, h2, h3 {
 a.bouton {
     display: inline-block;
     padding: 10px 20px; /* Espacement interne */
-    background-color: #007bff; /* Couleur de fond */
+    background-color: #ca16ee; /* Couleur de fond */
     color: #fff; /* Couleur du texte */
     text-decoration: none; /* Supprime le soulignement */
     border: none; /* Pas de bordure */
@@ -44,11 +48,11 @@ a.bouton {
 }
 
 a.bouton:hover {
-    background-color: #0056b3; /* Couleur de fond au survol */
+    background-color: #6e004a; /* Couleur de fond au survol */
 }
 
 
-/* Footer */
+/* -----------------------------------------------------Footer-------------------------------------------------- */
 footer {
     background-color: #333; /* Couleur de fond du footer */
     color: #fff; /* Couleur du texte du footer */

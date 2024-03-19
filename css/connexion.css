@@ -1,0 +1,56 @@
+/* ------------------------------------------------Géneral------------------------------------------- */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+    color: #333; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* ----------------------------------------------------header------------------------------------ */
+header {
+    background-color: #fff; /* Couleur de fond de l'en-tête */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+#LogoSite {
+    max-width: 200px; /* Taille maximale du logo */
+}
+
+
+/* -------------------------------------------------------main------------------------------------------ */
+main {
+    padding: 40px;
+    text-decoration: none; /* Supprime le soulignement du lien */
+    text-align: center;
+}
+
+
+
+/* -----------------------------------------------------Footer-------------------------------------------------- */
+footer {
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte du footer */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0; /* Supprime le marging droit du dernier élément */
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
