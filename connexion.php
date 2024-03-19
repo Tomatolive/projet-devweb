@@ -5,7 +5,7 @@
         <title>Page de connexion</title>
     </head>
     <body>
-        <h1>Bienvenue sur la page d'accueil</h1>
+        <h1>Bienvenue sur la page de connexion</h1>
 
         <form action="verificationConnexion.php" method="post">
             <div id="formulaire">
