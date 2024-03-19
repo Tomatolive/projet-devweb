@@ -25,13 +25,13 @@ La connexion s'effectue par une requête à une base de donnée MySQL. Pour cela
 Tout d'abord il vous faut vous connecter à MySQL, soit avec le profil root :  
 
 ```
-$ sudo mysql -u root -p
+sudo mysql -u root -p
 ```
 
 Ou avec le profil que vous aviez défini en cours de BDD, en ce qui me concerne la commande était la suivante :  
 
 ```
-$ sudo mysql -u thomas -p
+sudo mysql -u thomas -p
 ```
 
 Une fois connecté dans MySQL, utilisez **EXACTEMENT** les commandes suivantes :  
@@ -44,7 +44,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'devweb'@'localhost';
 Une fois cela fait, quittez le profil courant et relancez MySQL en utilisant le profil nouvellement créé :  
 
 ```
-$ mysql -u devweb -p
+mysql -u devweb -p
 ```
 
 Le mot de passe de ce profil est : `$iteDeR3nc0ntre`  

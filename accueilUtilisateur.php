@@ -1,6 +1,13 @@
 <?php
     session_start();
-    if ($_SESSION["profil"]!="utilisateur"){
+    require_once 'Usager.php';
+    if(isset($_SESSION["usager"])) {
+        $usager = unserialize($_SESSION["usager"]);
+        if($usager->getProfil() != "utilisateur") {
+            header('Location: connexion.php');
+            exit();
+        }
+    } else {
         header('Location: connexion.php');
         exit();
     }
@@ -13,8 +20,7 @@
     </head>
     <body>
         <div class="titre">
-          <h1 id="accueil">Accueil utilisateur</h1>
+            <h1 id="accueil">Accueil utilisateur</h1>
         </div>
-        <?php echo "Bienvenue dans la session utilisateur";?>
     </body>
 </html>

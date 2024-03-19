@@ -1,5 +1,7 @@
 <?php
     session_start();
+    require_once 'Usager.php';
+    require_once 'Admin.php';
 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $mysqli = new mysqli('localhost', 'devweb', '$iteDeR3nc0ntre', 'rencontre');
@@ -15,28 +17,46 @@
         $stmt->execute();
         $stmt->bind_result($login, $mdp, $profil);
         $stmt->fetch();
-        if($login == $_POST["login"] && $mdp == $_POST["mdp"]) {
-            $_SESSION["login"] = $login;
-            $_SESSION["mdp"] = $mdp;
-            $_SESSION["profil"] = $profil;
-            if($_SESSION["profil"] == "utilisateur") {
+        $stmt->close();
+        if($login == $_POST["login"] && password_verify($_POST["mdp"], $mdp)) {
+            if($profil == "utilisateur") {
+                $stmt2 = $mysqli->prepare("SELECT sexe, date_inscription, nom, prenom, ddn, ville, profession, situation, description, informations FROM Usager WHERE login = ?");
+                $stmt2->bind_param("s", $login_formate);
+                $stmt2->execute();
+                $stmt2->bind_result($sexe, $date_inscription, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations);
+                $stmt2->fetch();
+                $usager = new Usager($login, $sexe, $date_inscription, null, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $profil);
+                $usager_serialized = serialize($usager);
+                $_SESSION["usager"] = $usager_serialized;
+                $stmt2->close();
                 header('Location: accueilUtilisateur.php');
                 exit();
             }
-            else if($_SESSION["profil"] == "abonne") {
+            else if($profil == "abonne") {
+                $stmt2 = $mysqli->prepare("SELECT sexe, date_inscription, date_fin_abonnement, nom, prenom, ddn, ville, profession, situation, description, informations FROM Usager WHERE login = ?");
+                $stmt2->bind_param("s", $login_formate);
+                $stmt2->execute();
+                $stmt2->bind_result($sexe, $date_inscription, $date_fin_abonnement, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations);
+                $stmt2->fetch();
+                $usager = new Usager($login, $sexe, $date_inscription, $date_fin_abonnement, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $profil);
+                $usager_serialized = serialize($usager);
+                $_SESSION["usager"] = $usager_serialized;
+                $stmt2->close();
                 header('Location: accueilAbonne.php');
                 exit();
             }
-            else if($_SESSION["profil"] == "admin") {
+            else if($profil == "admin") {
+                $admin = new Admin($login);
+                $admin_serialized = serialize($admin);
+                $_SESSION["admin"] = $admin_serialized;
                 header('Location: accueilAdmin.php');
                 exit();
             }
         }
         else {
-            header('Location: connexion.php');
+            header('Location: connexion.php?error=wrong');
             exit();
         }
-        $stmt->close();
     }
 
     $mysqli->close();
