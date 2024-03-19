@@ -13,15 +13,12 @@
                 <p>Mot de passe : <input type="text" name="mdp" required></p>
                 <p>Nom : <input type="text" name="nom" required></p>
                 <p>Prénom : <input type="text" name="prenom" required></p>
-                <fieldset class="gender">
-                    <legend>Sexe</legend>
-                    <input type="radio" value="homme" checked />
-                    <label for="homme">Homme</label>
-                    <input type="radio" value="femme"/>
-                    <label for="femme">Femme</label>
-                    <input type="radio" value="autre"/>
-                    <label for="autre">Autre</label>
-                </fieldset>
+                <select name="sexe">
+                    <option value="">Selectionnez votre sexe</option>
+                    <option label="H" value="H">Homme</option>
+                    <option label="F" value="F">Femme</option>
+                    <option label="A" value="A">Autre</option>
+                </select>
                 <input type="submit" value="S'inscrire">
             </div>
         </form>
