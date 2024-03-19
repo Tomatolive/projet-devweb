@@ -6,7 +6,7 @@ CREATE TABLE Usager (
     nom VARCHAR(100),
     prenom VARCHAR(100),
     mdp VARCHAR(100),
-    sexe ENUM('H', 'F'),
+    sexe ENUM('H', 'F', 'A'),
     profil ENUM('admin', 'utilisateur', 'abonne'));
 
 INSERT INTO Usager VALUES ('admin', 'admin', 'admin', 'admin', 'H', 'admin');

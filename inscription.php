@@ -22,7 +22,7 @@
                     <input type="radio" value="autre"/>
                     <label for="autre">Autre</label>
                 </fieldset>
-                <input type="submit" value="Se connecter">
+                <input type="submit" value="S'inscrire">
             </div>
         </form>
     </body>
