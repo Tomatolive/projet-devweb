@@ -6,6 +6,11 @@
     </head>
     <body>
         <h1>Bienvenue sur la page d'inscription</h1>
+        <?php 
+            if(isset($_GET["error"]) && $_GET["error"] == "wrong") { 
+                echo "<p>Le login est déjà utilisé, veuillez en choisir un autre.</p>";
+            }
+        ?>
 
         <form action="verificationInscription.php" method="post">
             <div id="formulaire">

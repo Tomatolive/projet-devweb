@@ -1,6 +1,13 @@
 <?php
     session_start();
-    if ($_SESSION["profil"]!="abonne"){
+    require_once 'Usager.php';
+    if(isset($_SESSION["usager"])) {
+        $usager = unserialize($_SESSION["usager"]);
+        if($usager->getProfil() != "abonne") {
+            header('Location: connexion.php');
+            exit();
+        }
+    } else {
         header('Location: connexion.php');
         exit();
     }
@@ -15,6 +22,5 @@
         <div class="titre">
           <h1 id="accueil">Accueil abonne</h1>
         </div>
-        <?php echo "Bienvenue dans la session abonne";?>
     </body>
 </html>

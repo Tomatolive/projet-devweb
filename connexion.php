@@ -12,6 +12,11 @@
         </header>
 
         <main>    
+            <?php 
+                if(isset($_GET["error"]) && $_GET["error"] == "wrong") { 
+                    echo "<p>Le login ou le mot de passe est incorrect. Veuillez réessayer.</p>";
+                }
+            ?>
             <form action="verificationConnexion.php" method="post">
                 <div id="formulaire">
                     <div class="champ">
