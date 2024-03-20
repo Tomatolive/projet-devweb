@@ -6,26 +6,69 @@ body {
     padding: 0;
     border: 0;
 }
+
 /* ----------------------------------------------------header------------------------------------ */
 header {
-    background-color: #fff; /* Couleur de fond de l'en-tête */
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20200807/pngtree-purple-dark-nebula-galaxy-background-image_386049.jpg'); /* Chemin de l'image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    height: 220px; /* Hauteur de votre header */
+    color: #ffffff; /* Couleur du texte */
 }
 
 #LogoSite {
-    max-width: 200px; /* Taille maximale du logo */
+    max-width: 150px; /* Taille maximale du logo */
 }
-
 
 /* -------------------------------------------------------main------------------------------------------ */
-main {
+
+.main {
     padding: 40px;
     text-decoration: none; /* Supprime le soulignement du lien */
-    text-align: center;
+    display: inline-block;
 }
 
+.form {
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.champ {
+    margin-bottom: 15px;
+}
+
+.champ label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.champ input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    display: inline-block;
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #ca16ee; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
+}
+button:hover {
+    background-color: #6e004a; /* Couleur de fond au survol */
+}
 
 
 /* -----------------------------------------------------Footer-------------------------------------------------- */

@@ -7,16 +7,22 @@
     </head>
     <body>
         <header>
-            <img src="img/logo.png" alt="Logo du site" id="LogoSite">
+            <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
             <h1>StarLove</h1>
         </header>
 
         <main>    
             <form action="verificationConnexion.php" method="post">
                 <div id="formulaire">
-                    <p>Login : <input type="text" name="login" required></p>
-                    <p>Mot de passe : <input type="text" name="mdp" required></p>
-                    <input type="submit" value="Se connecter">
+                    <div class="champ">
+                        <label for="identifiant">Identifiant:</label>
+                        <input type="text" name="login" required>
+                    </div>
+                    <div class="champ">
+                        <label for="motdepasse">Mot de passe:</label>
+                        <input type="text" name="mdp" required>
+                    </div>
+                    <button type="submit" value="Se connecter">Se connecter</button>
                 </div>
             </form>
         </main>
