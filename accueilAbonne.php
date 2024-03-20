@@ -4,8 +4,14 @@
     if(isset($_SESSION["usager"])) {
         $usager = unserialize($_SESSION["usager"]);
         if($usager->getProfil() != "abonne") {
-            header('Location: connexion.php');
-            exit();
+            if($usager->getProfil() == "utilisateur") {
+                header('Location: accueilUtilisateur.php');
+            } else if($usager->getProfil() == "administrateur") {
+                header('Location: accueilAdministrateur.php');
+            } else {
+                header('Location: connexion.php');
+                exit();
+            }
         }
     } else {
         header('Location: connexion.php');
