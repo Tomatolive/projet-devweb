@@ -12,7 +12,9 @@
     </head>
     <body>
         <header>
-            <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+            <a href="accueilUtilisateur.php">
+                <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+            </a>
             <h1>StarLove</h1>
         </header>
 

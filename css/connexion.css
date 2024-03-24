@@ -5,30 +5,38 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    background-image: url('img/fond.png'); /* Chemin de l'image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    
 }
 
 /* ----------------------------------------------------header------------------------------------ */
 header {
     padding: 10px;
     text-align: center;
-    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20200807/pngtree-purple-dark-nebula-galaxy-background-image_386049.jpg'); /* Chemin de l'image de fond */
-    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
     height: 220px; /* Hauteur de votre header */
     color: #ffffff; /* Couleur du texte */
+    font-family: 'Pacifico', cursive; /* Utilisation de la police 'Pacifico' */
+    font-weight: bold; /* Gras */
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 #LogoSite {
     max-width: 150px; /* Taille maximale du logo */
 }
 
 /* -------------------------------------------------------main------------------------------------------ */
 
-.main {
+main {
     padding: 40px;
-    text-decoration: none; /* Supprime le soulignement du lien */
-    display: inline-block;
+    text-align: center;
+    color: #ffffff; /* Couleur du texte */
+    display: flex; /* Utilisation du modèle de disposition flexbox */
+    flex-direction: column; /* Alignement vertical des éléments */
+    justify-content: center; /* Centrage des éléments horizontalement */
+    align-items: center; /* Centrage des éléments verticalement */
+    height: calc(100vh - 460px);
 }
 
 .form {
@@ -65,6 +73,9 @@ button {
     border-radius: 5px; /* Coins arrondis */
     cursor: pointer; /* Curseur pointeur */
     transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
+    width: 200px; /* Largeur du bouton */
+    height: 50px; /* Hauteur du bouton */
+    font-size: 20px; /* Taille du texte */
 }
 button:hover {
     background-color: #6e004a; /* Couleur de fond au survol */
@@ -77,6 +88,7 @@ footer {
     color: #fff; /* Couleur du texte du footer */
     padding: 20px;
     text-align: center;
+    height: 100px;
 }
 
 .footer-nav ul {
@@ -97,3 +109,4 @@ footer {
     text-decoration: none;
     color: #fff;
 }
+

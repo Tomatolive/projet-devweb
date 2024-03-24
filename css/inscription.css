@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     
 }
+
 /* ----------------------------------------------------header------------------------------------ */
 header {
     padding: 10px;
@@ -26,6 +27,7 @@ header {
 }
 
 /* -------------------------------------------------------main------------------------------------------ */
+
 main {
     padding: 40px;
     text-align: center;
@@ -36,16 +38,72 @@ main {
     align-items: center; /* Centrage des éléments verticalement */
     height: calc(100vh - 460px);
 }
-main.bouton{
-    flex-direction: row;
+
+.form {
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
-    margin-bottom: 20px; /* Espacement entre les titres */
+.champ {
+    margin-bottom: 15px;
 }
 
-/* Styles pour transformer un lien en bouton */
-a.bouton {
+.champ label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.champ input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    display: inline-block;
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #ca16ee; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
+    width: 200px; /* Largeur du bouton */
+    height: 50px; /* Hauteur du bouton */
+    font-size: 20px; /* Taille du texte */
+}
+button:hover {
+    background-color: #6e004a; /* Couleur de fond au survol */
+}
+
+/* Style de base pour l'élément select */
+select {
+    appearance: none; /* Masque l'apparence par défaut */
+    padding: 10px; /* Espacement interne */
+    font-size: 16px; /* Taille de police */
+    border: 1px solid #ccc; /* Bordure */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: #fff; /* Couleur de fond */
+    cursor: pointer; /* Curseur pointeur */
+    width: 200px; /* Largeur */
+}
+/* Style au survol */
+select:hover {
+    border-color: #007bff; /* Changement de couleur de la bordure au survol */
+}
+
+/* Style lorsqu'il est activé */
+select:focus {
+    outline: none; /* Supprime le contour de mise au point */
+    box-shadow: 0 0 5px #007bff; /* Ajoute une ombre portée au focus */
+}
+/* Style de base pour l'élément input de type submit */
+input[type="submit"] {
     display: inline-block;
     padding: 10px 20px; /* Espacement interne */
     background-color: #ca16ee; /* Couleur de fond */
@@ -55,10 +113,18 @@ a.bouton {
     border-radius: 20px; /* Coins arrondis */
     cursor: pointer; /* Curseur pointeur */
     transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
+    font-size: 20px; /* Taille du texte */
 }
 
-a.bouton:hover {
-    background-color: #6e004a; /* Couleur de fond au survol */
+/* Style au survol */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Changement de couleur de fond au survol */
+}
+
+/* Style lorsqu'il est activé */
+input[type="submit"]:focus {
+    outline: none; /* Supprime le contour de mise au point */
+    box-shadow: 0 0 5px #0056b3; /* Ajoute une ombre portée au focus */
 }
 
 
@@ -89,3 +155,4 @@ footer {
     text-decoration: none;
     color: #fff;
 }
+

@@ -3,9 +3,18 @@
     <head>
         <meta charset="utf-8">
         <title>Page d'inscription</title>
+        <link rel="stylesheet" href="css/inscription.css">
     </head>
     <body>
-        <h1>Bienvenue sur la page d'inscription</h1>
+    <header>
+            <a href="accueilUtilisateur.php">
+                <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+            </a>
+            <h1>StarLove</h1>
+        </header>
+        
+        <main>
+        <h1>Rejoignez les étoiles</h1>
         <?php 
             if(isset($_GET["error"]) && $_GET["error"] == "wrong") { 
                 echo "<p>Le login est déjà utilisé, veuillez en choisir un autre.</p>";
@@ -27,5 +36,17 @@
                 <input type="submit" value="S'inscrire">
             </div>
         </form>
+        </main>
+    <footer>
+        <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Site de Rencontre - Tous droits réservés</p>
+        </div>
+    </footer>
     </body>
 </html>
