@@ -113,7 +113,7 @@ input[type="submit"] {
     border-radius: 20px; /* Coins arrondis */
     cursor: pointer; /* Curseur pointeur */
     transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
-    font-size: 20px; /* Taille du texte */
+    font-size: 20px; /* Taille du texte */  
 }
 
 /* Style au survol */
