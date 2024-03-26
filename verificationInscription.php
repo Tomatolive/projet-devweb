@@ -19,7 +19,7 @@
             header('Location: inscription.php?error=wrong');
             exit();
         } else {
-            if($stmt2 = $mysqli->prepare("INSERT INTO Usager (login, mdp, sexe, date_inscription, profil, nom, prenom) VALUES (?, ?, ?, CURDATE(), ?, ?, ?)")) {
+            if($stmt2 = $mysqli->prepare("INSERT INTO Usager (login, mdp, sexe, date_inscription, profil, nom, prenom, ddn) VALUES (?, ?, ?, CURDATE(), ?, ?, ?, ?)")) {
                 $login_formate = $mysqli->real_escape_string($_POST["login"]);
                 $mdp = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
                 $mdp_formate = $mysqli->real_escape_string($mdp);
@@ -27,7 +27,8 @@
                 $profil_formate = $mysqli->real_escape_string("utilisateur");
                 $nom_formate = $mysqli->real_escape_string($_POST["nom"]);
                 $prenom_formate = $mysqli->real_escape_string($_POST["prenom"]);
-                $stmt2->bind_param("ssssss", $login_formate, $mdp_formate, $sexe_formate, $profil_formate, $nom_formate, $prenom_formate);
+                $ddn_formate = $mysqli->real_escape_string($_POST["ddn"]);
+                $stmt2->bind_param("sssssss", $login_formate, $mdp_formate, $sexe_formate, $profil_formate, $nom_formate, $prenom_formate, $ddn_formate);
                 $stmt2->execute();
                 $stmt2->close();
                 header('Location: connexion.php');

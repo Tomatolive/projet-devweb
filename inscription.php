@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <title>Page d'inscription</title>
         <link rel="stylesheet" href="css/inscription.css">
+        <script src="js/script.js"></script>
     </head>
     <body>
     <header>
-            <a href="accueilUtilisateur.php">
+            <a href="index.html">
                 <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
             </a>
             <h1>StarLove</h1>
@@ -27,6 +28,7 @@
                 <p>Mot de passe : <input type="text" name="mdp" required></p>
                 <p>Nom : <input type="text" name="nom" required></p>
                 <p>Prénom : <input type="text" name="prenom" required></p>
+                <p>Date de naissance : <input type="date" id="ddn" name="ddn" min="1900-01-01" required pattern="\d{4}-\d{2}-\d{2}"></p>
                 <select name="sexe">
                     <option value="">Selectionnez votre sexe</option>
                     <option label="H" value="H">Homme</option>
