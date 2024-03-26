@@ -1,7 +1,7 @@
 <?php
     session_start();
-    require_once 'Usager.php';
-    require_once 'Admin.php';
+    require_once '../Usager.php';
+    require_once '../Admin.php';
 
     if(!isset($_POST["contenu"]) || !isset($_POST["id"])) {
         header('Location: messagerie.php');
@@ -44,11 +44,16 @@
         } else {
             $stmt2->bind_param("sssi", $login, $login1, $_POST["contenu"], $_POST["id"]);
         }
-        $stmt2->execute();
+        $succes = $stmt2->execute();
         $stmt2->close();
     }
 
     $mysqli->close();
-    header('Location: conversation.php?id=' . $_POST["id"]);
-    exit();  
+
+    if($succes) {
+        $reponse = array('succes' => $succes, 'nvMessage' => "<h3>".$_POST["contenu"]."</h3>");
+    }
+
+    header('Content-Type: application/json');
+    echo json_encode($reponse);
 ?>

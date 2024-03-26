@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Page d'inscription</title>
         <link rel="stylesheet" href="css/inscription.css">
-        <script src="js/script.js"></script>
+        <script src="js/inscription.js"></script>
     </head>
     <body>
     <header>

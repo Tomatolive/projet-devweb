@@ -1,17 +1,17 @@
 <?php
     session_start();
-    require_once 'Usager.php';
-    require_once 'Admin.php';
+    require_once '../Usager.php';
+    require_once '../Admin.php';
 
     if(!isset($_SESSION["usager"]) && !isset($_SESSION["admin"])) {
-        header('Location: connexion.php');
+        header('Location: ../connexion.php');
         exit();
     } else {
         if(isset($_SESSION["usager"])) {
             $usager = unserialize($_SESSION["usager"]);
             $login = $usager->getLogin();
             if($usager->getProfil() == "utilisateur") {
-                header('Location: accueilUtilisateur.php');
+                header('Location: ../accueilUtilisateur.php');
                 exit();
             }
         } else if(isset($_SESSION["admin"])) {
