@@ -41,7 +41,7 @@
             <li><a href="#">Messages</a></li>
             <li><a href="#">Consultations de profil</a></li>
             <li><a href="#">Mon profil</a></li>
-            <li><a href="#">Qui a vu mon profil</a></li> <!-- Nouvel onglet -->
+            <li><a href="#">Qui a vu mon profil</a></li> 
         </ul>
     </div>
     <div class="profile-container">

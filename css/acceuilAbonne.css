@@ -26,6 +26,68 @@ header {
     max-width: 150px; /* Taille maximale du logo */
 }
 
+/* Ajout pour les onglets à droite */
+#onglets {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#onglets ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#onglets ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#onglets ul li:last-child {
+    margin-right: 0;
+}
+
+#onglets ul li a {
+    text-decoration: none;
+    color: #000; /* Couleur du texte */
+    padding: 8px 16px; /* Ajustement de l'espacement */
+    background-color: #fff; /* Fond blanc */
+    border-radius: 5px;
+    font-size: 18px; /* Taille de la police */
+    font-family: "Times New Roman", Times, serif; /* Police de caractères classique */
+}
+
+#onglets ul li a:hover {
+    background-color: #eee; /* Fond gris clair au survol */
+}
+
+/* Ajout pour la suggestion de profil */
+.profile-container {
+    text-align: center;
+    margin-top: 50px; /* Marge supérieure pour l'espace entre le message d'accueil et la suggestion de profil */
+}
+.profile-image {
+    max-width: 10px; /* Largeur maximale de l'image */
+    display: block; /* Permet de centrer l'image horizontalement */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+/* Ajout pour encadrer la photo de profil */
+.profile-image {
+    border: 10px solid #000000; /* Bordure blanche autour de l'image */
+    padding: 0px; /* Espace à l'intérieur de la bordure */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.arrow {
+    margin-top: 20px; /* Marge supérieure pour l'espace entre l'image et la flèche */
+}
+.contact-button {
+    margin-top: 20px; /* Marge supérieure pour l'espace entre la flèche et le bouton */
+}
+
+
 /* -------------------------------------------------------main------------------------------------------ */
 
 main {
@@ -33,11 +95,36 @@ main {
     text-align: center;
     color: #ffffff; /* Couleur du texte */
     display: flex; /* Utilisation du modèle de disposition flexbox */
+    flex-direction: column; /* Alignement vertical des éléments */
     justify-content: center; /* Centrage des éléments horizontalement */
     align-items: center; /* Centrage des éléments verticalement */
     height: calc(100vh - 460px);
 }
 
+.form {
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.champ {
+    margin-bottom: 15px;
+}
+
+.champ label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.champ input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 button {
     display: inline-block;
     padding: 10px 20px; /* Espacement interne */
@@ -57,53 +144,17 @@ button:hover {
 }
 
 
-.menu {
-    position: fixed;
-    top: 220px;
-    left: 0;
-    width: 250px; /* Largeur du menu vertical */
-    height: 100vh;
-    flex-direction: column; /* Alignement vertical des éléments */
-}
- 
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
- 
-.menu li {
-    margin: 10px;
-}
- 
-.menu a {
-    display: block;
-    padding: 15px 20px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ca16ee; /* Couleur de fond */
-    color: #fff; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement */
-    border-radius: 20px; /* Coins arrondis */
-    margin-right: 10px; /* Espacement entre les liens */
-}
-
-
-#profile-image{
-    max-width: 250px; /* Taille maximale du logo */
-}
 /* -----------------------------------------------------Footer-------------------------------------------------- */
 footer {
-    background-color: #333; /* Couleur de fond du footer */
-    color: #fff; /* Couleur du texte du footer */
-    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 35px;
     text-align: center;
-    height: 100px;
+    position: fixed; /* Fixer le footer en bas de la page */
+    bottom: 0; /* Aligner le footer en bas de la page */
+    width: 100%; /* Définir la largeur du footer à 100% */
 }
+
 
 .footer-nav ul {
     list-style-type: none;
@@ -123,5 +174,3 @@ footer {
     text-decoration: none;
     color: #fff;
 }
-
- 
