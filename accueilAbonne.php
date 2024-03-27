@@ -46,7 +46,7 @@
     </div>
     <div class="profile-container">
         <h2 id="accueil">Suggestion Profil</h2>
-        <img src="css/img/homme.jpg" alt="Profil" id="profile-image">
+        
         <div class="bouton">
             <button class="contact-button">Contacter</button>
             <button class="suivant-button">Suivant</button>

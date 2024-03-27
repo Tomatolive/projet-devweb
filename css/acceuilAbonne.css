@@ -56,11 +56,14 @@ header {
     border-radius: 5px;
     font-size: 18px; /* Taille de la police */
     font-family: "Times New Roman", Times, serif; /* Police de caractères classique */
+    display: inline-block;
 }
 
 #onglets ul li a:hover {
     background-color: #eee; /* Fond gris clair au survol */
 }
+
+
 
 /* Ajout pour la suggestion de profil */
 .profile-container {
@@ -68,17 +71,18 @@ header {
     margin-top: 50px; /* Marge supérieure pour l'espace entre le message d'accueil et la suggestion de profil */
 }
 .profile-image {
-    max-width: 10px; /* Largeur maximale de l'image */
+    max-width: 20px; /* Largeur maximale de l'image */
     display: block; /* Permet de centrer l'image horizontalement */
     margin: 0 auto; /* Centre l'image horizontalement */
 }
 
 /* Ajout pour encadrer la photo de profil */
 .profile-image {
-    border: 10px solid #000000; /* Bordure blanche autour de l'image */
+    border: 10px solid #ffffff; /* Bordure blanche autour de l'image */
     padding: 0px; /* Espace à l'intérieur de la bordure */
     border-radius: 10px; /* Coins arrondis */
 }
+
 
 .arrow {
     margin-top: 20px; /* Marge supérieure pour l'espace entre l'image et la flèche */
