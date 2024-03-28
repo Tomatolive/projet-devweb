@@ -1,4 +1,21 @@
-<?php
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page de connexion</title>
+        <link rel="stylesheet" href="css/messagerie.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+            </a>
+            <h1>StarLove</h1>
+        </header>
+
+        <main>
+        <?php
     session_start();
     require_once '../Usager.php';
     require_once '../Admin.php';
@@ -57,4 +74,19 @@
     // }
 
     $mysqli->close();
-?>
+?>  
+        </main>
+
+        <footer>
+        <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Site de Rencontre - Tous droits réservés</p>
+        </div>
+    </footer>
+    </body>
+</html>
