@@ -1,0 +1,114 @@
+/* ------------------------------------------------Géneral------------------------------------------- */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+    color: #333; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url('img/fond.png'); /* Chemin de l'image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    
+}
+
+/* ----------------------------------------------------header------------------------------------ */
+header {
+    padding: 10px;
+    text-align: center;
+    height: 220px; /* Hauteur de votre header */
+    color: #ffffff; /* Couleur du texte */
+    font-family: 'Pacifico', cursive; /* Utilisation de la police 'Pacifico' */
+    font-weight: bold; /* Gras */
+}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+#LogoSite {
+    max-width: 150px; /* Taille maximale du logo */
+}
+
+/* -------------------------------------------------------main------------------------------------------ */
+
+main {
+    padding: 40px;
+    text-align: center;
+    color: #ffffff; /* Couleur du texte */
+    display: flex; /* Utilisation du modèle de disposition flexbox */
+    flex-direction: column; /* Alignement vertical des éléments */
+    justify-content: center; /* Centrage des éléments horizontalement */
+    align-items: center; /* Centrage des éléments verticalement */
+    height: calc(100vh - 460px);
+}
+
+.form {
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.champ {
+    margin-bottom: 15px;
+}
+
+.champ label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.champ input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    display: inline-block;
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #ffffff; /* Couleur de fond */
+    color: #000000; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
+    width: 200px; /* Largeur du bouton */
+    height: 50px; /* Hauteur du bouton */
+    font-size: 20px; /* Taille du texte */
+}
+button:hover {
+    background-color: #6e004a; /* Couleur de fond au survol */
+}
+
+
+/* -----------------------------------------------------Footer-------------------------------------------------- */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 35px;
+    text-align: center;
+    position: fixed; /* Fixer le footer en bas de la page */
+    bottom: 0; /* Aligner le footer en bas de la page */
+    width: 100%; /* Définir la largeur du footer à 100% */
+}
+
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0; /* Supprime le marging droit du dernier élément */
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
