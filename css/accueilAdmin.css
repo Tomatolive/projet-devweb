@@ -18,7 +18,7 @@ header {
     text-align: center;
     height: 220px; /* Hauteur de votre header */
     color: #ffffff; /* Couleur du texte */
-    font-family: 'Pacifico', cursive; /* Utilisation de la police 'Pacifico' */
+    font-family: "Times New Roman", Times, serif;
     font-weight: bold; /* Gras */
 }
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
@@ -26,10 +26,49 @@ header {
     max-width: 150px; /* Taille maximale du logo */
 }
 
+.profile-container {
+    text-align: center;
+    margin-top: 10px; 
+}
+
+#boutons {
+    text-align: center; /* Centrer horizontalement les boutons */
+    margin-top: 150px; /* Espacement par rapport au contenu précédent */
+}
+
+#boutons ul {
+    list-style-type: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Supprimer les marges intérieures de la liste */
+}
+
+#boutons ul li {
+    display: inline-block; /* Afficher les éléments de la liste en ligne */
+    margin-right: 10px; /* Espacement entre les éléments */
+}
+
+#boutons ul li:last-child {
+    margin-right: 0; /* Supprimer la marge de droite du dernier élément */
+}
+
+#boutons ul li a {
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    color: #000; /* Couleur du texte */
+    background-color: #fff; /* Couleur de fond */
+    padding: 10px 20px; /* Espacement intérieur */
+    border: 1px solid #000; /* Bordure de 1 pixel solide noire */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+#boutons ul li a:hover {
+    background-color: #000; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+}
+
+
 /* -------------------------------------------------------main------------------------------------------ */
 
 main {
-    padding: 40px;
+    padding: 10px;
     text-align: center;
     color: #ffffff; /* Couleur du texte */
     display: flex; /* Utilisation du modèle de disposition flexbox */
@@ -86,7 +125,7 @@ button:hover {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 35px;
+    padding: 45px;
     text-align: center;
     position: fixed; /* Fixer le footer en bas de la page */
     bottom: 0; /* Aligner le footer en bas de la page */
