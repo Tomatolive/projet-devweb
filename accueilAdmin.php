@@ -40,9 +40,6 @@
         <h1>StarLove</h1>
     </div>
     <main>
-        <div class="profile-container">
-            <h2 id="accueil">Accueil Administrateur</h2>
-        </div>
         <div id="boutons">
         <ul>
             <li><a href="#"> Gestion des messages</a></li>
@@ -50,7 +47,27 @@
         </ul>
     </div>
     </main>
+    <!-- Onglets à droite -->
+    <div id="onglets">
+        <ul>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Consultations de profil</a></li>
+            <li><a href="#">Mon profil</a></li>
+            <li><a href="#">Qui a vu mon profil</a></li>
+        </ul>
+    </div>
 </header>
+<!-- Suggestion de profil -->
+<main>
+    <div class="profile-container">
+        <h2 id="accueil">Suggestion Profil</h2>
+        
+        <div class="bouton">
+            <button class="contact-button">Contacter</button>
+            <button class="suivant-button">Suivant</button>
+        </div>
+    </div>
+</main>
 <footer>
     <div class="footer-nav">
         <ul>
@@ -64,4 +81,5 @@
 </footer>
 </body>
 </html>
+
 

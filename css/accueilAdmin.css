@@ -26,14 +26,76 @@ header {
     max-width: 150px; /* Taille maximale du logo */
 }
 
+/* Ajout pour les onglets à droite */
+#onglets {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    }
+    
+    #onglets ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    #onglets ul li {
+    display: inline-block;
+    margin-right: 10px;
+    }
+    
+    #onglets ul li:last-child {
+    margin-right: 0;
+    }
+    
+    #onglets ul li a {
+    text-decoration: none;
+    color: #000; /* Couleur du texte */
+    padding: 8px 16px; /* Ajustement de l'espacement */
+    background-color: #fff; /* Fond blanc */
+    border-radius: 5px;
+    font-size: 18px; /* Taille de la police */
+    font-family: "Times New Roman", Times, serif; /* Police de caractères classique */
+    }
+    
+    #onglets ul li a:hover {
+    background-color: #eee; /* Fond gris clair au survol */
+    }
+    
+/* Ajout pour la suggestion de profil */
+.profile-container {
+    text-align: center;
+    margin-top: 10px; /* Marge supérieure pour l'espace entre le message d'accueil et la suggestion de profil */
+}
+.profile-image {
+    max-width: 20px; /* Largeur maximale de l'image */
+    display: block; /* Permet de centrer l'image horizontalement */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+/* Ajout pour encadrer la photo de profil */
+.profile-image {
+    border: 10px solid #ffffff; /* Bordure blanche autour de l'image */
+    padding: 0px; /* Espace à l'intérieur de la bordure */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+
+.suivant.button {
+    margin-top: 20px; /* Marge supérieure pour l'espace entre l'image et le bouton */
+}
+.contact-button {
+    margin-top: 20px; /* Marge supérieure pour l'espace entre la flèche et le bouton */
+}
 .profile-container {
     text-align: center;
     margin-top: 10px; 
 }
 
 #boutons {
-    text-align: center; /* Centrer horizontalement les boutons */
-    margin-top: 150px; /* Espacement par rapport au contenu précédent */
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
 
 #boutons ul {
