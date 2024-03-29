@@ -82,8 +82,8 @@ header {
 }
 
 
-.arrow {
-    margin-top: 20px; /* Marge supérieure pour l'espace entre l'image et la flèche */
+.suivant.button {
+    margin-top: 20px; /* Marge supérieure pour l'espace entre l'image et le bouton */
 }
 .contact-button {
     margin-top: 20px; /* Marge supérieure pour l'espace entre la flèche et le bouton */
