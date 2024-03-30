@@ -9,7 +9,6 @@ body {
     background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    
 }
 
 /* ----------------------------------------------------header------------------------------------ */
@@ -39,95 +38,19 @@ main {
     height: calc(100vh - 460px);
 }
 
-.form {
-    width: 300px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.champ {
-    margin-bottom: 15px;
-}
-
-.champ label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.champ input {
-    width: 300px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-button {
+.conversation{
     display: inline-block;
     padding: 10px 20px; /* Espacement interne */
-    background-color: #ca16ee; /* Couleur de fond */
-    color: #fff; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement */
-    border: none; /* Pas de bordure */
+    background-color: #bd14ba; /* Couleur de fond */
+    border: none; /* Supprime la bordure */
     border-radius: 5px; /* Coins arrondis */
     cursor: pointer; /* Curseur pointeur */
-    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
-    width: 200px; /* Largeur du bouton */
-    height: 50px; /* Hauteur du bouton */
-    font-size: 20px; /* Taille du texte */
+    transition: background-color 0.3s ease; /* Transition de couleur de fond */
 }
-button:hover {
-    background-color: #6e004a; /* Couleur de fond au survol */
-}
-
-/* Style de base pour l'élément select */
-select {
-    appearance: none; /* Masque l'apparence par défaut */
-    padding: 10px; /* Espacement interne */
-    font-size: 16px; /* Taille de police */
-    border: 1px solid #ccc; /* Bordure */
-    border-radius: 10px; /* Coins arrondis */
-    background-color: #fff; /* Couleur de fond */
-    cursor: pointer; /* Curseur pointeur */
-    width: 200px; /* Largeur */
-}
-/* Style au survol */
-select:hover {
-    border-color: #007bff; /* Changement de couleur de la bordure au survol */
-}
-
-/* Style lorsqu'il est activé */
-select:focus {
-    outline: none; /* Supprime le contour de mise au point */
-    box-shadow: 0 0 5px #007bff; /* Ajoute une ombre portée au focus */
-}
-/* Style de base pour l'élément input de type submit */
-input[type="submit"] {
-    display: inline-block;
-    padding: 10px 20px; /* Espacement interne */
-    background-color: #ca16ee; /* Couleur de fond */
+.conversation a{
+    text-decoration: none;
     color: #fff; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement */
-    border: none; /* Pas de bordure */
-    border-radius: 20px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointeur */
-    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
-    font-size: 20px; /* Taille du texte */  
 }
-
-/* Style au survol */
-input[type="submit"]:hover {
-    background-color: #0056b3; /* Changement de couleur de fond au survol */
-}
-
-/* Style lorsqu'il est activé */
-input[type="submit"]:focus {
-    outline: none; /* Supprime le contour de mise au point */
-    box-shadow: 0 0 5px #0056b3; /* Ajoute une ombre portée au focus */
-}
-
-
 /* -----------------------------------------------------Footer-------------------------------------------------- */
 footer {
     background-color: #333; /* Couleur de fond du footer */
