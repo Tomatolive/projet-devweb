@@ -1,7 +1,7 @@
 /* ------------------------------------------------Géneral------------------------------------------- */
 body {
     font-family: Arial, sans-serif; /* Police de caractères par défaut */
-    color: #333; /* Couleur du texte */
+    color: hsl(0, 0%, 20%); /* Couleur du texte */
     margin: 0;
     padding: 0;
     border: 0;

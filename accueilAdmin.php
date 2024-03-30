@@ -50,9 +50,9 @@
     <!-- Onglets à droite -->
     <div id="onglets">
         <ul>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">Consultations de profil</a></li>
-            <li><a href="#">Mon profil</a></li>
+            <li><a href="messagerie/messagerie.php">Messages</a></li>
+            <li><a href="recherche.php">Consultations de profil</a></li>
+            <li><a href="profil.php">Mon profil</a></li>
             <li><a href="#">Qui a vu mon profil</a></li>
         </ul>
     </div>
