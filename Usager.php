@@ -29,7 +29,7 @@
             $this->description = $description;
             $this->informations = $informations;
             $this->profil = $profil;
-            $this->setZodiaque();
+            $this->zodiaque = Usager::setZodiaque($this->ddn);
         }
 
         public function getLogin() {
@@ -140,39 +140,39 @@
             $this->profil = $profil;
         }
 
-        public function setZodiaque() {
-            $date = explode("-", $this->ddn);
+        public static function setZodiaque($ddn) {
+            $date = explode("-", $ddn);
             $jour = $date[2];
             $mois = $date[1];
             if (($mois == 3 && $jour >= 21) || ($mois == 4 && $jour <= 19)) {
-                $this->zodiaque = "Bélier";
+                return "Bélier";
             } else if (($mois == 4 && $jour >= 20) || ($mois == 5 && $jour <= 20)) {
-                $this->zodiaque = "Taureau";
+                return "Taureau";
             } else if (($mois == 5 && $jour >= 21) || ($mois == 6 && $jour <= 21)) {
-                $this->zodiaque = "Gémeaux";
+                return "Gémeaux";
             } else if (($mois == 6 && $jour >= 22) || ($mois == 7 && $jour <= 22)) {
-                $this->zodiaque = "Cancer";
+                return "Cancer";
             } else if (($mois == 7 && $jour >= 23) || ($mois == 8 && $jour <= 22)) {
-                $this->zodiaque = "Lion";
+                return "Lion";
             } else if (($mois == 8 && $jour >= 23) || ($mois == 9 && $jour <= 22)) {
-                $this->zodiaque = "Vierge";
+                return "Vierge";
             } else if (($mois == 9 && $jour >= 23) || ($mois == 10 && $jour <= 23)) {
-                $this->zodiaque = "Balance";
+                return "Balance";
             } else if (($mois == 10 && $jour >= 24) || ($mois == 11 && $jour <= 21)) {
-                $this->zodiaque = "Scorpion";
+                return "Scorpion";
             } else if (($mois == 11 && $jour >= 22) || ($mois == 12 && $jour <= 21)) {
-                $this->zodiaque = "Sagittaire";
+                return "Sagittaire";
             } else if (($mois == 12 && $jour >= 22) || ($mois == 1 && $jour <= 19)) {
-                $this->zodiaque = "Capricorne";
+                return "Capricorne";
             } else if (($mois == 1 && $jour >= 20) || ($mois == 2 && $jour <= 18)) {
-                $this->zodiaque = "Verseau";
+                return "Verseau";
             } else if (($mois == 2 && $jour >= 19) || ($mois == 3 && $jour <= 20)) {
-                $this->zodiaque = "Poissons";
+                return "Poissons";
             } 
         }
 
         public function __toString() {
-            return "Login : " . $this->login . ", Sexe : " . $this->sexe . ", Date d'inscription : " . $this->date_inscription . ", Date de fin d'abonnement : " . $this->date_fin_abonnement . ", Nom : " . $this->nom . ", Prénom : " . $this->prenom . ", Date de naissance : " . $this->ddn . ", Ville : " . $this->ville . ", Situation : " . $this->situation . ", Description : " . $this->description . ", Informations : " . $this->informations . ", Profil : " . $this->profil;
+            return "Login : " . $this->login . ", Sexe : " . $this->sexe . ", Date d'inscription : " . $this->date_inscription . ", Date de fin d'abonnement : " . $this->date_fin_abonnement . ", Nom : " . $this->nom . ", Prénom : " . $this->prenom . ", Date de naissance : " . $this->ddn . ", Ville : " . $this->ville . ", Situation : " . $this->situation . ", Description : " . $this->description . ", Informations : " . $this->informations . ", Profil : " . $this->profil . ", Signe du zodiaque : " . $this->zodiaque;
         }
 
         public function afficher() {

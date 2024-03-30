@@ -16,7 +16,8 @@ CREATE TABLE Usager (
     situation ENUM('celibataire', 'divorce', 'veuf'),
     description TEXT,
     informations TEXT,
-    profil ENUM('utilisateur', 'abonne', 'admin') NOT NULL
+    profil ENUM('utilisateur', 'abonne', 'admin') NOT NULL,
+    zodiaque ENUM('Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire', 'Capricorne', 'Verseau', 'Poissons')
 );
 
 CREATE TABLE Conversation (
