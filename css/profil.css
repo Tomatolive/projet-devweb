@@ -1,0 +1,12 @@
+/* Stylisation des informations du profil */
+.infoClassique p,
+.infoComplémentaire p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px
+}
+
+/* Stylisation de la photo de profil */
+#photoProfil {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}

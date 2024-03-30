@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <title>Profil</title>
+    <link rel="stylesheet" href="css/profil.css">
+</head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil - Site de Rencontre</title>
@@ -16,14 +20,14 @@
 
     <main>
         <div class="infoClassique">
-            <img src="" alt="photo de Profil" id="photoProfil">
+            <img src="" alt="Photo de profil :" id="photoProfil">
             <p>Nom : </p>
             <p>Prénom : </p>
-            <p>signe astrologique</p>
+            <p>Signe astrologique :</p>
             <p>Date de naissance :</p>
         </div>
         <div class="infoComplémentaire">
-            <p>bio</p>
+            <p>Bio :</p>
         </div>
     </main>
 
