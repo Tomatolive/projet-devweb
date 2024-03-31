@@ -45,8 +45,27 @@
     <head>
         <meta charset="utf-8">
         <title>Conversation</title>
+        <link rel="stylesheet" href="../css/conversation.css">
     </head>
     <body>
+    <header>
+    <div>
+        <a href="accueilUtilisateur.php">
+            <img src="../css/img/logo.png" alt="Logo du site" id="LogoSite">
+        </a>
+        <h1>StarLove</h1>
+    </div>
+    <!-- Onglets à droite -->
+    <div id="onglets">
+        <ul>
+            <li><a href="messagerie/messagerie.php">Messages</a></li>
+            <li><a href="recherche.php">Consultations de profil</a></li>
+            <li><a href="profil.php">Mon profil</a></li>
+            <li><a href="#">Qui a vu mon profil</a></li>
+        </ul>
+    </div>
+</header>
+<main>
         <div id="conversation">
             <?php
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -64,11 +83,11 @@
                     while($stmt->fetch()) {
                         if($expediteur == $login) {
                             echo "<h3 class='self'>$contenu</h3>";
-                            echo "<p>$date_envoi</p>";
+                            echo "<p class='date'>$date_envoi</p>";
                         }
                         if($receveur == $login) {
                             echo "<h3 class='other'>$contenu</h3>";
-                            echo "<p>$date_envoi</p>";
+                            echo "<p class='date'>$date_envoi</p>";
                         }
                     }
                     $stmt->close();
@@ -83,5 +102,17 @@
             <input type="submit" value="Envoyer">
         </form>
         <script src="../js/messagerie.js"></script>
+            </main>
+        <footer>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Site de Rencontre - Tous droits réservés</p>
+            </div>
+        </footer>
     </body>
 </html>

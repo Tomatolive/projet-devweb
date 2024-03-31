@@ -1,0 +1,124 @@
+/* ------------------------------------------------Géneral------------------------------------------- */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+    color: #333; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url('img/fond.png'); /* Chemin de l'image de fond */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+/* ----------------------------------------------------header------------------------------------ */
+header {
+    padding: 10px;
+    text-align: center;
+    height: 220px; /* Hauteur de votre header */
+    color: #ffffff; /* Couleur du texte */
+    font-family: 'Pacifico', cursive; /* Utilisation de la police 'Pacifico' */
+    font-weight: bold; /* Gras */
+}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+#LogoSite {
+    max-width: 150px; /* Taille maximale du logo */
+}
+
+/* Ajout pour les onglets à droite */
+#onglets {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    }
+    
+    #onglets ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    #onglets ul li {
+    display: inline-block;
+    margin-right: 10px;
+    }
+    
+    #onglets ul li:last-child {
+    margin-right: 0;
+    }
+    
+    #onglets ul li a {
+    text-decoration: none;
+    color: #000; /* Couleur du texte */
+    padding: 8px 16px; /* Ajustement de l'espacement */
+    background-color: #fff; /* Fond blanc */
+    border-radius: 5px;
+    font-size: 18px; /* Taille de la police */
+    font-family: "Times New Roman", Times, serif; /* Police de caractères classique */
+    }
+    
+    #onglets ul li a:hover {
+    background-color: #6e004a; 
+    }
+/* -------------------------------------------------------main------------------------------------------ */
+#conversation{
+    color: rgb(255, 255, 255);
+}
+
+.self {
+    background-color: #e14254;
+    border: 1px solid #d72929;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 20%;
+    margin: 10px;
+    color: black;
+    text-align: center;
+  }
+
+  .other {
+    background-color: #DCF8C6;
+    border: 1px solid #a2d729;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 50%;
+    margin: 10px;
+    color: black;
+  }
+
+#text {
+    color: aqua;
+}
+
+.date{
+    color: #ffffff; /* Couleur du texte */
+}
+/* -----------------------------------------------------Footer-------------------------------------------------- */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 35px;
+    text-align: center;
+    bottom: 0; /* Aligner le footer en bas de la page */
+    width: 100%; /* Définir la largeur du footer à 100% */
+}
+
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0; /* Supprime le marging droit du dernier élément */
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
