@@ -51,7 +51,7 @@
     $mysqli->close();
 
     if($succes) {
-        $reponse = array('succes' => $succes, 'nvMessage' => "<h3>".$_POST["contenu"]."</h3>");
+        $reponse = array('succes' => $succes, 'nvMessage' => "<h3 class='self'>".$_POST["contenu"]."</h3>");
     }
 
     header('Content-Type: application/json');
