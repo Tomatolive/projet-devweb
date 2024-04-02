@@ -16,10 +16,19 @@
     </head>
     <body>
         <header>
-            <a href="accueilUtilisateur.html">
+            <a href="accueilUtilisateur.php">
                 <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
             </a>
             <h1>StarLove</h1>
+            <div id="onglets">
+        <ul>
+            <li><a href="../profil.php">Profil</a></li>
+            <li><a href="../recherche.php">Recherche</a></li>
+            <li><a href="messagerie.php">Messages</a></li>
+            <li><a href="#">Qui a vu mon profil</a></li>
+            <li><a href="connexion.php">Déconnexion</a></li>
+        </ul>
+    </div>
         </header>
 
         <main>
@@ -29,5 +38,16 @@
                 <input type="submit" value="Rechercher">
             </form>
         </main>
+        <footer>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Site de Rencontre - Tous droits réservés</p>
+            </div>
+        </footer>
     </body>
 </html>
