@@ -74,7 +74,13 @@ main {
     height: calc(100vh - 460px);
 }
 
-
+main li{
+    list-style-type: none; /* Supprime les points à gauche */
+    padding: 0; /* Supprime le remplissage par défaut */
+    background-color: #f4f4f4; /* Couleur de fond pour chaque élément de liste */
+    padding: 10px; /* Ajoute un espacement à l'intérieur de chaque élément de liste */
+    color: black;
+}
 
 /* -----------------------------------------------------Footer-------------------------------------------------- */
 footer {
