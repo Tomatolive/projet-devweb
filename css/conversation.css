@@ -9,7 +9,6 @@ body {
     background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    
 }
 
 /* ----------------------------------------------------header------------------------------------ */
@@ -61,98 +60,45 @@ header {
     #onglets ul li a:hover {
     background-color: #6e004a; 
     }
-    
-
-/* Ajout pour la suggestion de profil */
-.profile-container {
-    text-align: center;
-    margin-top: 10px; /* Marge supérieure pour l'espace entre le message d'accueil et la suggestion de profil */
-}
-.profile-image {
-    max-width: 20px; /* Largeur maximale de l'image */
-    display: block; /* Permet de centrer l'image horizontalement */
-    margin: 0 auto; /* Centre l'image horizontalement */
-}
-
-/* Ajout pour encadrer la photo de profil */
-.profile-image {
-    border: 10px solid #ffffff; /* Bordure blanche autour de l'image */
-    padding: 0px; /* Espace à l'intérieur de la bordure */
-    border-radius: 10px; /* Coins arrondis */
-}
-
-
-.suivant.button {
-    margin-top: 20px; /* Marge supérieure pour l'espace entre l'image et le bouton */
-}
-.contact-button {
-    margin-top: 20px; /* Marge supérieure pour l'espace entre la flèche et le bouton */
-}
-
-
 /* -------------------------------------------------------main------------------------------------------ */
-
-main {
-    padding: 40px;
-    text-align: center;
-    color: #ffffff; /* Couleur du texte */
-    display: flex; /* Utilisation du modèle de disposition flexbox */
-    flex-direction: column; /* Alignement vertical des éléments */
-    justify-content: center; /* Centrage des éléments horizontalement */
-    align-items: center; /* Centrage des éléments verticalement */
-    height: calc(100vh - 460px);
+#conversation{
+    color: rgb(255, 255, 255);
 }
 
-.form {
-    width: 300px;
-    background-color: #f9f9f9;
-    padding: 20px;
+.self {
+    background-color: #e14254;
+    border: 1px solid #d72929;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 20%;
+    margin: 10px;
+    color: black;
+    text-align: center;
+  }
+
+  .other {
+    background-color: #DCF8C6;
+    border: 1px solid #a2d729;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 50%;
+    margin: 10px;
+    color: black;
+  }
+
+#text {
+    color: aqua;
 }
 
-.champ {
-    margin-bottom: 15px;
+.date{
+    color: #ffffff; /* Couleur du texte */
 }
-
-.champ label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.champ input {
-    width: 300px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-button {
-    display: inline-block;
-    padding: 10px 20px; /* Espacement interne */
-    background-color: #ffffff; /* Couleur de fond */
-    color: #000000; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement */
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointeur */
-    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
-    width: 200px; /* Largeur du bouton */
-    height: 50px; /* Hauteur du bouton */
-    font-size: 20px; /* Taille du texte */
-}
-button:hover {
-    background-color: #6e004a; /* Couleur de fond au survol */
-}
-
-
 /* -----------------------------------------------------Footer-------------------------------------------------- */
 footer {
     background-color: #333;
     color: #fff;
     padding: 35px;
     text-align: center;
-    position: fixed; /* Fixer le footer en bas de la page */
     bottom: 0; /* Aligner le footer en bas de la page */
     width: 100%; /* Définir la largeur du footer à 100% */
 }

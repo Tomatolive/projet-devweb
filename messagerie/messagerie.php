@@ -3,13 +3,13 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Page de connexion</title>
-        <link rel="stylesheet" href="css/messagerie.css">
+        <title>messagerie</title>
+        <link rel="stylesheet" href="../css/messagerie.css">
     </head>
     <body>
         <header>
             <a href="index.html">
-                <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+                <img src="../css/img/logo.png" alt="Logo du site" id="LogoSite">
             </a>
             <h1>StarLove</h1>
         </header>
@@ -53,10 +53,10 @@
         $stmt->bind_result($id, $login1, $login2);
         while($stmt->fetch()) {
             if($login1 == $login) {
-                echo "<p><a href='conversation.php?id=$id'>Conversation avec $login2</a></p>";
+                echo "<p class=\"conversation\"><a href='conversation.php?id=$id'>Conversation avec $login2</a></p>";
             }
             if($login2 == $login) {
-                echo "<p><a href='conversation.php?id=$id'>Conversation avec $login1</a></p>";
+                echo "<p class=\"conversation\"><a href='conversation.php?id=$id'>Conversation avec $login1</a></p>";
             }
         }
         $stmt->close();
