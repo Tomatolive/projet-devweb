@@ -24,7 +24,7 @@
         <ul>
             <li><a href="../profil.php">Profil</a></li>
             <li><a href="../recherche.php">Recherche</a></li>
-            <li><a href="messagerie.php">Messages</a></li>
+            <li><a href="messagerie/messagerie.php">Messages</a></li>
             <li><a href="#">Qui a vu mon profil</a></li>
             <li><a href="connexion.php">Déconnexion</a></li>
         </ul>
