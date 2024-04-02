@@ -15,23 +15,24 @@
         exit();
     }
 
-    if($stmt = $mysqli->prepare("SELECT login, zodiaque, nom, prenom, sexe, ddn FROM Usager WHERE login = ? OR zodiaque = ?")) {
+    if($stmt = $mysqli->prepare("SELECT login, zodiaque, nom, prenom, sexe, ddn, profil FROM Usager WHERE login = ?")) {
         $login_formate = $mysqli->real_escape_string($_POST["pseudonyme"]);
-        $zodiaque_formate = $mysqli->real_escape_string($_POST["zodiaque"]);
-        $stmt->bind_param("ss", $login_formate, $zodiaque_formate);
+        $stmt->bind_param("s", $login_formate);
         $stmt->execute();
-        $stmt->bind_result($login, $zodiaque, $nom, $prenom, $sexe, $ddn);
+        $stmt->bind_result($login, $zodiaque, $nom, $prenom, $sexe, $ddn, $profil);
         echo "<h2>Résultats de la recherche</h2>";
         $res = false;
         while($stmt->fetch()) {
-            $res = true;
-            echo "<p>Profil de $prenom $nom :</p>";
-            echo "<ul>";
-            echo "<li>Pseudonyme : $login</li>";
-            echo "<li>Signe du zodiaque : $zodiaque</li>";
-            echo "<li>Sexe : $sexe</li>";
-            echo "<li>Date de naissance : $ddn</li>";
-            echo "</ul>";
+            if($profil != "admin") {
+                $res = true;
+                echo "<p>Profil de $prenom $nom :</p>";
+                echo "<ul>";
+                echo "<li>Pseudonyme : $login</li>";
+                echo "<li>Signe du zodiaque : $zodiaque</li>";
+                echo "<li>Sexe : $sexe</li>";
+                echo "<li>Date de naissance : $ddn</li>";
+                echo "</ul>";
+            }
         }
         if(!$res) {
             echo "<p>Aucun résultat ne correspond à votre recherche.</p>";
