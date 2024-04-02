@@ -83,11 +83,11 @@
                     while($stmt->fetch()) {
                         if($expediteur == $login) {
                             echo "<h3 class='self'>$contenu</h3>";
-                            echo "<p class='date'>$date_envoi</p>";
+                            echo "<p class='dateSelf'>$date_envoi</p>";
                         }
                         if($receveur == $login) {
                             echo "<h3 class='other'>$contenu</h3>";
-                            echo "<p class='date'>$date_envoi</p>";
+                            echo "<p class='dateOther'>$date_envoi</p>";
                         }
                     }
                     $stmt->close();
