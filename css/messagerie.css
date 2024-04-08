@@ -24,6 +24,41 @@ header {
 #LogoSite {
     max-width: 150px; /* Taille maximale du logo */
 }
+/* Ajout pour les onglets à droite */
+#onglets {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    }
+    
+    #onglets ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    #onglets ul li {
+    display: inline-block;
+    margin-right: 10px;
+    }
+    
+    #onglets ul li:last-child {
+    margin-right: 0;
+    }
+    
+    #onglets ul li a {
+    text-decoration: none;
+    color: #000; /* Couleur du texte */
+    padding: 8px 16px; /* Ajustement de l'espacement */
+    background-color: #fff; /* Fond blanc */
+    border-radius: 5px;
+    font-size: 18px; /* Taille de la police */
+    font-family: "Times New Roman", Times, serif; /* Police de caractères classique */
+    }
+    
+    #onglets ul li a:hover {
+    background-color: #6e004a; 
+    }
 
 /* -------------------------------------------------------main------------------------------------------ */
 
