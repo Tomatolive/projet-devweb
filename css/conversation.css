@@ -70,7 +70,7 @@ main{
     color: rgb(255, 255, 255);
 }
 
-.self {
+.other {
     background-color: #e14254;
     border: 1px solid #d72929;
     border-radius: 10px;
@@ -82,29 +82,29 @@ main{
     margin-left: 220px;
   }
 
-  .other {
-    background-color: #DCF8C6;
-    border: 1px solid #a2d729;
-    border-radius: 10px;
-    padding: 10px;
-    display: block;
-    max-width: 30%;
-    color: black;
-    margin-bottom: 4px;
-    margin-left: 400px;
-  }
+.self {
+background-color: #DCF8C6;
+border: 1px solid #a2d729;
+border-radius: 10px;
+padding: 10px;
+display: block;
+max-width: 30%;
+color: black;
+margin-bottom: 4px;
+margin-left: 400px;
+}
 
 #text {
     color: aqua;
 }
 
-.dateOther{
+.dateSelf{
     color: #ffffff; /* Couleur du texte */
     margin-bottom: 20px;
     margin-top: 0px;
     margin-left: 400px;
 }
-.dateSelf{
+.dateOther{
     color: #ffffff; /* Couleur du texte */
     margin-bottom: 20px;
     margin-top: 0px;

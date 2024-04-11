@@ -30,22 +30,23 @@
     </header>
 
     <main>
-        <div class="infoClassique">
-            <img src="" alt="Photo de profil :" id="photoProfil">
-            <?php
-                echo "<p>Nom : ".$usager->getNom()."</p>";
-                echo "<p>Prénom : ".$usager->getPrenom()."</p>";
-                echo "<p>Signe astrologique : ".$usager->getZodiaque()."</p>";
-                echo "<p>Date de naissance : ".$usager->getDdn()."</p>";
-            ?>
-        </div>
-        <div class="infoComplémentaire">
-            <?php
-                echo "<p>Bio : ".$usager->getDescription()."</p>";
-            ?>
-        </div>
+        <form action="verificationProfil.php" method="post">
+            <div class="infoClassique">
+                <img src="" alt="Photo de profil :" id="photoProfil">
+                <?php
+                    echo "<p>Nom : <input type=\"text\" name=\"nom\" value=\"".$usager->getNom()."\"></input></p>";
+                    echo "<p>Prénom : <input type=\"text\" name=\"prenom\" value=\"".$usager->getPrenom()."\"></input></p>";
+                    echo "<p>Date de naissance : <input type=\"text\" name=\"ddn\" value=\"".$usager->getDdn()."\"></input></p>";
+                ?>
+            </div>
+            <div class="infoComplémentaire">
+                <?php
+                    echo "<p>Bio : <input type=\"text\" name=\"bio\" value=\"".$usager->getDescription()."\"></input></p>";
+                ?>
+            </div>
+            <input type="submit" value="Modifier mon profil">
+        </form>
 
-        <a href="modifierProfil.php">Modifier mon profil</a>
     </main>
 
     <footer>

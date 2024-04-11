@@ -171,6 +171,10 @@
             } 
         }
 
+        public function setZodiaque2($ddn) {
+            $this->zodiaque = Usager::setZodiaque($ddn);
+        }
+
         public function __toString() {
             return "Login : " . $this->login . ", Sexe : " . $this->sexe . ", Date d'inscription : " . $this->date_inscription . ", Date de fin d'abonnement : " . $this->date_fin_abonnement . ", Nom : " . $this->nom . ", Prénom : " . $this->prenom . ", Date de naissance : " . $this->ddn . ", Ville : " . $this->ville . ", Situation : " . $this->situation . ", Description : " . $this->description . ", Informations : " . $this->informations . ", Profil : " . $this->profil . ", Signe du zodiaque : " . $this->zodiaque;
         }
