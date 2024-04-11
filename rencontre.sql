@@ -42,6 +42,17 @@ CREATE TABLE Message (
     FOREIGN KEY (conversation) REFERENCES Conversation(id)
 );
 
+CREATE TABLE Signalement (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    date_signalement DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    message_id INT NOT NULL,
+    plaintif VARCHAR(100) NOT NULL,
+    signale VARCHAR(100) NOT NULL,
+    FOREIGN KEY (message_id) REFERENCES Message(id),
+    FOREIGN KEY (plaintif) REFERENCES Usager(login),
+    FOREIGN KEY (signale) REFERENCES Usager(login)
+);
+
 INSERT INTO Usager (login, mdp, profil) VALUES ('admin', '$2y$10$HYf7YjR381BoEnxEMzswCefyKtwJfCTHJ2eiM6esPM3F88GnWK6ke', 'admin');
 INSERT INTO Usager (login, mdp, sexe, date_inscription, profil) VALUES ('oliviertamon', '$2y$10$U6kfsomBKVicBz1ROslHkuT6KbUyCjaEawkPpoPKC.d1FfrDCGVYS', 'H', CURDATE(), 'abonne');
 INSERT INTO Usager (login, mdp, sexe, date_inscription, date_fin_abonnement, profil) VALUES ('thomasllasera', '$2y$10$U6kfsomBKVicBz1ROslHkuT6KbUyCjaEawkPpoPKC.d1FfrDCGVYS', 'H', CURDATE(), '2024-12-31', 'abonne');

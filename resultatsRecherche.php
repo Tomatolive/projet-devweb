@@ -58,6 +58,10 @@
                             echo "<li>Sexe: $sexe</li>";
                             echo "<li>Date de naissance: $ddn</li>";
                             echo "</ul>";
+                            echo "<form action=\"messagerie/contacter.php\" method=\"post\">";
+                            echo "<input type=\"hidden\" name=\"destinataire\" value=\"".$login."\"></input>";
+                            echo "<input type=\"hidden\" name=\"profil\" value=\"".$profil."\"></input>";
+                            echo "<input type=\"submit\" value=\"Envoyer un message\"></input>";
                         }
                     }
                     if(!$res) {
@@ -80,4 +84,3 @@
         </footer>
     </body>
 </html>
-

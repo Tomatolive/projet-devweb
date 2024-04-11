@@ -90,9 +90,11 @@
                             echo "</div>";
                         }
                         if($receveur == $login) {
+                            echo "<div>";
                             echo "<h3 class='other'>$contenu</h3>";
                             echo "<p class='dateOther'>$date_envoi</p>";
-                            echo "<button class='sign'>Signaler</button>";
+                            echo "<button class='sign' data-message-id='".$id."'>Signaler</button>";
+                            echo "</div>";
                         }
                     }
                     $stmt->close();
