@@ -32,7 +32,7 @@
                     </div>
                     <div class="champ">
                         <label for="motdepasse">Mot de passe:</label>
-                        <input type="text" name="mdp" required>
+                        <input type="password" name="mdp" required>
                     </div>
                     <button type="submit" value="Se connecter">Se connecter</button>
                 </div>

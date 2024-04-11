@@ -25,7 +25,7 @@
         <form action="verificationInscription.php" method="post">
             <div id="formulaire">
                 <p>Login : <input type="text" name="login" required></p>
-                <p>Mot de passe : <input type="text" name="mdp" required></p>
+                <p>Mot de passe : <input type="password" name="mdp" required></p>
                 <p>Nom : <input type="text" name="nom" required></p>
                 <p>Prénom : <input type="text" name="prenom" required></p>
                 <p>Date de naissance : <input type="date" id="ddn" name="ddn" min="1900-01-01" required pattern="\d{4}-\d{2}-\d{2}"></p>
