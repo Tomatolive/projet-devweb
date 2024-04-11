@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil - Site de Rencontre</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/inscription.js"></script>
 </head>
 <body>
     <header>
@@ -34,9 +35,9 @@
             <div class="infoClassique">
                 <img src="" alt="Photo de profil :" id="photoProfil">
                 <?php
-                    echo "<p>Nom : <input type=\"text\" name=\"nom\" value=\"".$usager->getNom()."\"></input></p>";
-                    echo "<p>Prénom : <input type=\"text\" name=\"prenom\" value=\"".$usager->getPrenom()."\"></input></p>";
-                    echo "<p>Date de naissance : <input type=\"text\" name=\"ddn\" value=\"".$usager->getDdn()."\"></input></p>";
+                    echo "<p>Nom : <input type=\"text\" name=\"nom\" value=\"".$usager->getNom()."\" required></input></p>";
+                    echo "<p>Prénom : <input type=\"text\" name=\"prenom\" value=\"".$usager->getPrenom()."\" required></input></p>";
+                    echo "<p>Date de naissance : <input type=\"date\" name=\"ddn\" id=\"ddn\" value=\"".$usager->getDdn()."\" min=\"1900-01-01\" required pattern=\"\d{4}-\d{2}-\d{2}\"></input></p>";
                 ?>
             </div>
             <div class="infoComplémentaire">
