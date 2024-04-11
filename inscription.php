@@ -31,9 +31,9 @@
                 <p>Date de naissance : <input type="date" id="ddn" name="ddn" min="1900-01-01" required pattern="\d{4}-\d{2}-\d{2}"></p>
                 <select name="sexe">
                     <option value="">Selectionnez votre sexe</option>
-                    <option label="H" value="H">Homme</option>
-                    <option label="F" value="F">Femme</option>
-                    <option label="A" value="A">Autre</option>
+                    <option label="Homme" value="H">Homme</option>
+                    <option label="Femme" value="F">Femme</option>
+                    <option label="Autre" value="A">Autre</option>
                 </select>
                 <input type="submit" value="S'inscrire">
             </div>
