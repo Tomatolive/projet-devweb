@@ -77,18 +77,22 @@
                     exit();
                 }
 
-                if($stmt = $mysqli->prepare("SELECT expediteur, receveur, date_envoi, contenu FROM Message WHERE conversation = ?")) {
+                if($stmt = $mysqli->prepare("SELECT id, expediteur, receveur, date_envoi, contenu FROM Message WHERE conversation = ?")) {
                     $stmt->bind_param("i", $_GET["id"]);
                     $stmt->execute();
-                    $stmt->bind_result($expediteur, $receveur, $date_envoi, $contenu);
+                    $stmt->bind_result($id, $expediteur, $receveur, $date_envoi, $contenu);
                     while($stmt->fetch()) {
                         if($expediteur == $login) {
+                            echo "<div>";
                             echo "<h3 class='self'>$contenu</h3>";
                             echo "<p class='dateSelf'>$date_envoi</p>";
+                            echo "<button class='suppr' data-message-id='".$id."'>Supprimer</button>";
+                            echo "</div>";
                         }
                         if($receveur == $login) {
                             echo "<h3 class='other'>$contenu</h3>";
                             echo "<p class='dateOther'>$date_envoi</p>";
+                            echo "<button class='sign'>Signaler</button>";
                         }
                     }
                     $stmt->close();

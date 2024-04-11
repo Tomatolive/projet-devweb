@@ -27,7 +27,7 @@
         $stmt->close();
         $usager->setNom($_POST["nom"]);
         $usager->setPrenom($_POST["prenom"]);
-        $usager->setZodiaque($_POST["ddn"]);
+        $usager->setZodiaque2($_POST["ddn"]);
         $usager->setDdn($_POST["ddn"]);
         $usager->setDescription($_POST["bio"]);
         $_SESSION['usager'] = serialize($usager);
