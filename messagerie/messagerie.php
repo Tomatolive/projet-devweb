@@ -81,7 +81,7 @@
             if(!isset($_SESSION["admin"])) {
                 echo "<form action=\"contacter.php\" method=\"post\">";
                 echo "<input type=\"hidden\" name=\"profil\" value=\"admin\"></input>";
-                echo "<input type=\"submit\" value=\"Contacter un admin\"></input>";
+                echo "<input id=\"modif\" type=\"submit\" value=\"Contacter un admin\"></input>";
                 echo "</form>";
             }
         ?>  

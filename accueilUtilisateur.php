@@ -37,7 +37,6 @@
     </head>
     <body>
         <header>
-        <header>
     <div>
         <a href="accueilUtilisateur.php">
             <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
@@ -52,11 +51,10 @@
         </ul>
     </div>
 </header>
-        </header>
 
         <main>
                 <h2>discuter avec vos futurs partenaires</h2>
-                <li><a href="">S'abboner</a></li>
+                <li><a href="abonnement.php">S'abboner</a></li>
         </main>
 
         <footer>
