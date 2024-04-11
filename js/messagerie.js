@@ -50,3 +50,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var reportButtons = document.querySelectorAll('.sign');
+    reportButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var messageId = this.getAttribute('data-message-id');
+            if (confirm('Êtes-vous sûr de vouloir signaler ce message ?')) {
+                // Envoyer une requête AJAX pour signaler le message
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '../messagerie/signalerMessage.php', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            // Actualiser l'interface utilisateur après le signalement
+                            if (xhr.responseText.trim() === 'success') {
+                                alert('Le message a été signalé avec succès.');
+                            } else {
+                                alert('Erreur lors du signalement du message.');
+                            }
+                        } else {
+                            alert('Erreur de requête AJAX : ' + xhr.status);
+                        }
+                    }
+                };
+                xhr.send('message_id=' + messageId); // Envoyer l'identifiant du message
+            }
+        });
+    });
+});
