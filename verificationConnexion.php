@@ -20,12 +20,12 @@
         $stmt->close();
         if($login == $_POST["login"] && password_verify($_POST["mdp"], $mdp)) {
             if($profil == "utilisateur") {
-                $stmt2 = $mysqli->prepare("SELECT sexe, date_inscription, nom, prenom, ddn, ville, profession, situation, description, informations FROM Usager WHERE login = ?");
+                $stmt2 = $mysqli->prepare("SELECT sexe, date_inscription, nom, prenom, ddn, ville, profession, situation, description, informations, image FROM Usager WHERE login = ?");
                 $stmt2->bind_param("s", $login_formate);
                 $stmt2->execute();
-                $stmt2->bind_result($sexe, $date_inscription, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations);
+                $stmt2->bind_result($sexe, $date_inscription, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $image);
                 $stmt2->fetch();
-                $usager = new Usager($login, $sexe, $date_inscription, null, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $profil);
+                $usager = new Usager($login, $sexe, $date_inscription, null, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $profil, $image);
                 $usager_serialized = serialize($usager);
                 $_SESSION["usager"] = $usager_serialized;
                 $stmt2->close();
@@ -33,12 +33,12 @@
                 exit();
             }
             else if($profil == "abonne") {
-                $stmt2 = $mysqli->prepare("SELECT sexe, date_inscription, date_fin_abonnement, nom, prenom, ddn, ville, profession, situation, description, informations FROM Usager WHERE login = ?");
+                $stmt2 = $mysqli->prepare("SELECT sexe, date_inscription, date_fin_abonnement, nom, prenom, ddn, ville, profession, situation, description, informations, image FROM Usager WHERE login = ?");
                 $stmt2->bind_param("s", $login_formate);
                 $stmt2->execute();
-                $stmt2->bind_result($sexe, $date_inscription, $date_fin_abonnement, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations);
+                $stmt2->bind_result($sexe, $date_inscription, $date_fin_abonnement, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $image);
                 $stmt2->fetch();
-                $usager = new Usager($login, $sexe, $date_inscription, $date_fin_abonnement, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $profil);
+                $usager = new Usager($login, $sexe, $date_inscription, $date_fin_abonnement, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $profil, $image);
                 $usager_serialized = serialize($usager);
                 $_SESSION["usager"] = $usager_serialized;
                 $stmt2->close();

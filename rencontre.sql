@@ -17,7 +17,8 @@ CREATE TABLE Usager (
     description TEXT,
     informations TEXT,
     profil ENUM('utilisateur', 'abonne', 'admin') NOT NULL,
-    zodiaque ENUM('Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire', 'Capricorne', 'Verseau', 'Poissons')
+    zodiaque ENUM('Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire', 'Capricorne', 'Verseau', 'Poissons'),
+    image VARCHAR(100)
 );
 
 CREATE TABLE Conversation (

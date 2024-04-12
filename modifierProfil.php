@@ -39,10 +39,10 @@
     </div>
         </header>
     <main>
-        <form action="verificationProfil.php" method="post">
+        <form action="verificationProfil.php" method="post" enctype="multipart/form-data">
             <div class="infoClassique">
-                <img src="" alt="Photo de profil :" id="photoProfil">
                 <?php
+                    echo "<input type=\"file\" name=\"imageFile\">";
                     echo "<p>Nom : <input type=\"text\" name=\"nom\" value=\"".$usager->getNom()."\" required></input></p>";
                     echo "<p>Prénom : <input type=\"text\" name=\"prenom\" value=\"".$usager->getPrenom()."\" required></input></p>";
                     echo "<p>Date de naissance : <input type=\"date\" name=\"ddn\" id=\"ddn\" value=\"".$usager->getDdn()."\" min=\"1900-01-01\" required pattern=\"\d{4}-\d{2}-\d{2}\"></input></p>";
