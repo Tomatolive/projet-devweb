@@ -38,7 +38,7 @@
         $description_formate = $mysqli->real_escape_string($_POST["bio"]);
         $login_formate = $mysqli->real_escape_string($usager->getLogin());
         $image_formate = $mysqli->real_escape_string($uploadFile);
-        $stmt->bind_param("sssssss", $nom_formate, $prenom_formate, $zodiaque_formate, $ddn_formate, $description_formate, $login_formate, $image_formate);
+        $stmt->bind_param("sssssss", $nom_formate, $prenom_formate, $zodiaque_formate, $ddn_formate, $description_formate, $image_formate, $login_formate);
         $stmt->execute();
         $stmt->close();
         $usager->setNom($_POST["nom"]);

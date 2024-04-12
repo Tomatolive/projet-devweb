@@ -41,17 +41,18 @@
                     exit();
                 }
             
-                if($stmt = $mysqli->prepare("SELECT login, zodiaque, nom, prenom, sexe, ddn, profil FROM Usager WHERE login = ?")) {
+                if($stmt = $mysqli->prepare("SELECT login, zodiaque, nom, prenom, sexe, ddn, profil, image FROM Usager WHERE login = ?")) {
                     $login_formate = $mysqli->real_escape_string($_POST["pseudonyme"]);
                     $stmt->bind_param("s", $login_formate);
                     $stmt->execute();
-                    $stmt->bind_result($login, $zodiaque, $nom, $prenom, $sexe, $ddn, $profil);
+                    $stmt->bind_result($login, $zodiaque, $nom, $prenom, $sexe, $ddn, $profil, $image);
                     echo "<h2>Résultats de la recherche</h2>";
                     $res = false;
                     while($stmt->fetch()) {
                         if($profil != "admin") {
                             $res = true;
                             echo "<ul>";
+                            echo "<li><img src='".$image."' alt='Photo de profil' id='photoProfil'></li>";
                             echo "<li>Nom: $nom </li>";
                             echo "<li>Prénom: $prenom </li>";
                             echo "<li>Pseudonyme: $login</li>";
