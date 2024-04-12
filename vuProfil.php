@@ -21,6 +21,7 @@
     <head>
         <meta charset="utf-8">
         <title>Qui a vu mon profil ?</title>
+        <link rel="stylesheet" href="css/vuProfil.css">
     </head>
     <body>
         <header>
