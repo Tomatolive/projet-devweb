@@ -75,3 +75,7 @@ main a {
 #modif:hover {
     background-color: #6e004a; /* Couleur de fond au survol */
 }
+#photoProfil {
+    max-width: 200px;
+    max-height: 200px;
+}
