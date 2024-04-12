@@ -29,7 +29,7 @@
     </head>
     <body>
         <header>
-            <a href="index.html">
+            <a href="../accueilAbonne.php">
                 <img src="../css/img/logo.png" alt="Logo du site" id="LogoSite">
             </a>
             <h1>StarLove</h1>
@@ -37,12 +37,12 @@
         <ul>
             <?php
                 if(isset($_SESSION["admin"])) {
-                    echo "<li><a href=\"../admin.php\">Admin</a></li>";
+                    echo "<li><a href=\"../Admin.php\">Admin</a></li>";
                 } else {
                     echo '<li><a href="../profil.php">Profil</a></li>';
                     echo '<li><a href="../recherche.php">Recherche</a></li>';
                     echo '<li><a href="messagerie.php">Messages</a></li>';
-                    echo '<li><a href="#">Qui a vu mon profil</a></li>';
+                    echo '<li><a href="vuProfil.php">Qui a vu mon profil</a></li>';
                     echo '<li><a href="../connexion.php">Déconnexion</a></li>';
                 }
             ?>
