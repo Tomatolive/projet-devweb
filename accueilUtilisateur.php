@@ -53,8 +53,8 @@
 </header>
 
         <main>
-                <h2>discuter avec vos futurs partenaires</h2>
-                <li><a href="abonnement.php">S'abboner</a></li>
+                <h2>Discuter avec vos futurs partenaires</h2>
+                <li><a href="abonnement.php">S'abonner</a></li>
         </main>
 
         <footer>
