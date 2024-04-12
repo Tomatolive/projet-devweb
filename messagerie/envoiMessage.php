@@ -51,7 +51,7 @@
     $mysqli->close();
 
     if($succes) {
-        $reponse = array('succes' => $succes, 'nvMessage' => "<h3 class='self'>".$_POST["contenu"]."</h3>");
+        $reponse = array('succes' => $succes, 'nvMessage' => "<h3 class='self'>".$_POST["contenu"]."</h3><p class='dateSelf'>".date('Y-m-d H:i:s')."</p><button class='suppr' data-message-id='".$id."'>Supprimer</button>");
     }
 
     header('Content-Type: application/json');
