@@ -14,8 +14,9 @@
         private $informations;
         private $profil;
         private $zodiaque;
+        private $image;
 
-        public function __construct($login, $sexe, $date_inscription, $date_fin_abonnement, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $profil) {
+        public function __construct($login, $sexe, $date_inscription, $date_fin_abonnement, $nom, $prenom, $ddn, $ville, $profession, $situation, $description, $informations, $profil, $image) {
             $this->login = $login;
             $this->sexe = $sexe;
             $this->date_inscription = $date_inscription;
@@ -30,6 +31,7 @@
             $this->informations = $informations;
             $this->profil = $profil;
             $this->zodiaque = Usager::setZodiaque($this->ddn);
+            $this->image = $image;
         }
 
         public function getLogin() {
@@ -86,6 +88,10 @@
 
         public function getZodiaque() {
             return $this->zodiaque;
+        }
+
+        public function getImage() {
+            return $this->image;
         }
 
         public function setLogin($login) {
@@ -173,6 +179,10 @@
 
         public function setZodiaque2($ddn) {
             $this->zodiaque = Usager::setZodiaque($ddn);
+        }
+
+        public function setImage($image) {
+            $this->image = $image;
         }
 
         public function __toString() {
