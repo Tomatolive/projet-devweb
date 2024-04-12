@@ -18,17 +18,17 @@
         exit();
     }
 
-    if($stmt = $mysqli->prepare("SELECT expediteur, receveur FROM Message WHERE id = ?")) {
+    if($stmt = $mysqli->prepare("SELECT expediteur, receveur, contenu FROM Message WHERE id = ?")) {
         $stmt->bind_param("i", $messageId);
         $stmt->execute();
-        $stmt->bind_result($expediteur, $destinataire);
+        $stmt->bind_result($expediteur, $destinataire, $contenu);
         $stmt->fetch();
         $stmt->close();
     }
 
     $success = false;
-    if($stmt = $mysqli->prepare("INSERT INTO Signalement (message_id, plaintif, signale) VALUES (?, ?, ?)")) {
-        $stmt->bind_param("iss", $messageId, $destinataire, $expediteur);
+    if($stmt = $mysqli->prepare("INSERT INTO Signalement (message_id, message, plaintif, signale) VALUES (?, ?, ?, ?)")) {
+        $stmt->bind_param("isss", $messageId, $contenu, $destinataire, $expediteur);
         $stmt->execute();
         $stmt->close();
         $success = true;

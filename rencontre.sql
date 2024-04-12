@@ -1,6 +1,7 @@
 DROP DATABASE IF EXISTS rencontre;
 CREATE DATABASE rencontre;
 USE rencontre;
+SET FOREIGN_KEY_CHECKS=0;
 
 CREATE TABLE Usager (
     login VARCHAR(100) PRIMARY KEY NOT NULL,
@@ -27,8 +28,8 @@ CREATE TABLE Conversation (
     date_dernier_message DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     login1 VARCHAR(100) NOT NULL,
     login2 VARCHAR(100) NOT NULL,
-    FOREIGN KEY (login1) REFERENCES Usager(login),
-    FOREIGN KEY (login2) REFERENCES Usager(login)
+    FOREIGN KEY (login1) REFERENCES Usager(login) ON DELETE CASCADE,
+    FOREIGN KEY (login2) REFERENCES Usager(login) ON DELETE CASCADE
 );
 
 CREATE TABLE Message (
@@ -38,20 +39,21 @@ CREATE TABLE Message (
     expediteur VARCHAR(100) NOT NULL,
     receveur VARCHAR(100) NOT NULL,
     conversation INT NOT NULL,
-    FOREIGN KEY (expediteur) REFERENCES Usager(login),
-    FOREIGN KEY (receveur) REFERENCES Usager(login),
-    FOREIGN KEY (conversation) REFERENCES Conversation(id)
+    FOREIGN KEY (expediteur) REFERENCES Usager(login) ON DELETE CASCADE,
+    FOREIGN KEY (receveur) REFERENCES Usager(login) ON DELETE CASCADE,
+    FOREIGN KEY (conversation) REFERENCES Conversation(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Signalement (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     date_signalement DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     message_id INT NOT NULL,
+    message VARCHAR(100) NOT NULL,
     plaintif VARCHAR(100) NOT NULL,
     signale VARCHAR(100) NOT NULL,
-    FOREIGN KEY (message_id) REFERENCES Message(id),
-    FOREIGN KEY (plaintif) REFERENCES Usager(login),
-    FOREIGN KEY (signale) REFERENCES Usager(login)
+    FOREIGN KEY (message_id) REFERENCES Message(id) ON DELETE CASCADE,
+    FOREIGN KEY (plaintif) REFERENCES Usager(login) ON DELETE CASCADE,
+    FOREIGN KEY (signale) REFERENCES Usager(login) ON DELETE CASCADE
 );
 
 CREATE TABLE Recherche (
@@ -59,8 +61,8 @@ CREATE TABLE Recherche (
     date_recherche DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     chercheur VARCHAR(100) NOT NULL,
     recherche VARCHAR(100) NOT NULL,
-    FOREIGN KEY (chercheur) REFERENCES Usager(login),
-    FOREIGN KEY (recherche) REFERENCES Usager(login)
+    FOREIGN KEY (chercheur) REFERENCES Usager(login) ON DELETE CASCADE,
+    FOREIGN KEY (recherche) REFERENCES Usager(login) ON DELETE CASCADE
 );
 
 INSERT INTO Usager (login, mdp, profil) VALUES ('admin', '$2y$10$HYf7YjR381BoEnxEMzswCefyKtwJfCTHJ2eiM6esPM3F88GnWK6ke', 'admin');
