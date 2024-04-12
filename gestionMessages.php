@@ -1,4 +1,21 @@
-<?php
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page de connexion</title>
+        <link rel="stylesheet" href="css/gestionMessages.css">
+    </head>
+    <body>
+        <header>
+            <a href="accueilAdmin.php">
+                <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+            </a>
+            <h1>StarLove</h1>
+        </header>
+
+        <main>    
+        <?php
     session_start();
     require_once 'Admin.php';
     if(!isset($_SESSION['admin'])){
@@ -26,3 +43,8 @@
         $stmt->close();
     }
 ?>
+        </main>
+
+        
+    </body>
+</html>

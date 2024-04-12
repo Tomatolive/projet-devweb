@@ -60,14 +60,7 @@
 </header>
 <!-- Suggestion de profil -->
 <main>
-    <div class="profile-container">
-        <h2 id="accueil">Suggestion Profil</h2>
-        
-        <div class="bouton">
-            <button class="contact-button">Contacter</button>
-            <button class="suivant-button">Suivant</button>
-        </div>
-    </div>
+    
 </main>
 <footer>
     <div class="footer-nav">
