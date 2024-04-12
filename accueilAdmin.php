@@ -39,21 +39,20 @@
         <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
         <h1>StarLove</h1>
     </div>
-    <main>
         <div id="boutons">
         <ul>
             <li><a href="#"> Gestion des messages</a></li>
             <li><a href="#">Gestion des profils</a></li>
         </ul>
     </div>
-    </main>
     <!-- Onglets à droite -->
     <div id="onglets">
         <ul>
+            <li><a href="profil.php">Profil</a></li>
+            <li><a href="recherche.php">Recherche</a></li>
             <li><a href="messagerie/messagerie.php">Messages</a></li>
-            <li><a href="recherche.php">Consultations de profil</a></li>
-            <li><a href="profil.php">Mon profil</a></li>
             <li><a href="#">Qui a vu mon profil</a></li>
+            <li><a href="connexion.php">Déconnexion</a></li>
         </ul>
     </div>
 </header>

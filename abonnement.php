@@ -24,22 +24,22 @@
         <link rel="stylesheet" href="css/abonnement.css">
     </head>
     <body>
-        <header>
-            <div>
-                <a href="accueilUtilisateur.php">
-                    <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
-                </a>
-                <h1>StarLove</h1>
-            </div>
-            <!-- Onglets à droite -->
-            <div id="onglets">
-                <ul>
-                    <li><a href="profil.php">Profil</a></li>
-                    <li><a href="recherche.php">Recherche</a></li>
-                    <li><a href="deconnexion.php">Déconnexion</a></li>
-                </ul>
-            </div>
-        </header>
+    <header>
+    <div>
+        <a href="accueilUtilisateur.php">
+            <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+        </a>
+        <h1>StarLove</h1>
+    </div>
+    <!-- Onglets à droite -->
+    <div id="onglets">
+        <ul>
+            <li><a href="profil.php">Profil</a></li>
+            <li><a href="connexion.php">Déconnexion</a></li>
+        </ul>
+    </div>
+</header>
+    <main>
         <h2>Abonnement</h2>
         <div id="abonnement">
             <form action="verificationAbonnement.php" method="post">
@@ -52,5 +52,17 @@
                 <input type="submit" value="S'abonner">
             </form>
         </div>
+    </main>
+        <footer>
+        <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Site de Rencontre - Tous droits réservés</p>
+        </div>
+    </footer>
     </body>
 </html>

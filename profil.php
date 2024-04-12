@@ -22,12 +22,21 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header>
-        <a href="accueilUtilisateur.php">
-            <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
-        </a>
-        <h1>StarLove</h1>
-    </header>
+<header>
+            <a href="index.html">
+                <img src="../css/img/logo.png" alt="Logo du site" id="LogoSite">
+            </a>
+            <h1>StarLove</h1>
+            <div id="onglets">
+        <ul>
+            <li><a href="../profil.php">Profil</a></li>
+            <li><a href="../recherche.php">Recherche</a></li>
+            <li><a href="messagerie.php">Messages</a></li>
+            <li><a href="#">Qui a vu mon profil</a></li>
+            <li><a href="../connexion.php">Déconnexion</a></li>
+        </ul>
+    </div>
+        </header>
 
     <main>
         <div class="infoClassique">

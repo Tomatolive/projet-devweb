@@ -9,6 +9,7 @@ body {
     background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    
 }
 
 /* ----------------------------------------------------header------------------------------------ */
@@ -24,7 +25,6 @@ header {
 #LogoSite {
     max-width: 150px; /* Taille maximale du logo */
 }
-
 /* Ajout pour les onglets à droite */
 #onglets {
     position: absolute;
@@ -61,82 +61,68 @@ header {
     background-color: #6e004a; 
     }
 /* -------------------------------------------------------main------------------------------------------ */
-main{
-    min-height: calc(100vh - 320px);
-}
 
-
-#conversation{
-    color: rgb(255, 255, 255);
-}
-
-.other {
-    background-color: #e14254;
-    border: 1px solid #d72929;
-    border-radius: 10px;
-    padding: 10px;
-    display: block;
-    max-width: 30%;
-    color: black;
-    margin-bottom: 4px;
-    margin-left: 220px;
-  }
-
-.self {
-background-color: #DCF8C6;
-border: 1px solid #a2d729;
-border-radius: 10px;
-padding: 10px;
-display: block;
-max-width: 30%;
-color: black;
-margin-bottom: 4px;
-margin-left: 400px;
-}
-
-.sign {
-    margin-left: 225px;
-}
-.suppr {
-    margin-left: 400px;
-}
-
-#text {
-    color: aqua;
-}
-
-.dateSelf{
+main {
+    padding: 40px;
+    text-align: center;
     color: #ffffff; /* Couleur du texte */
-    margin-bottom: 20px;
-    margin-top: 0px;
-    margin-left: 400px;
-}
-.dateOther{
-    color: #ffffff; /* Couleur du texte */
-    margin-bottom: 20px;
-    margin-top: 0px;
-    margin-left: 220px;
+    display: flex; /* Utilisation du modèle de disposition flexbox */
+    flex-direction: column; /* Alignement vertical des éléments */
+    justify-content: center; /* Centrage des éléments horizontalement */
+    align-items: center; /* Centrage des éléments verticalement */
+    height: calc(100vh - 460px);
 }
 
-#formulaire{
-    max-width: 400px; /* Largeur maximale du formulaire */
-    margin-left: 220px ; /* Centre le formulaire horizontalement */
-    margin-top: 30px;
-    padding: 20px;
+.form {
+    width: 300px;
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.champ {
+    margin-bottom: 15px;
+}
+
+.champ label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.champ input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+/* Styles pour transformer un lien en bouton */
+main a {
+    display: inline-block;
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #ca16ee; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    border: none; /* Pas de bordure */
+    border-radius: 20px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
+}
+
+main a:hover {
+    background-color: #6e004a; /* Couleur de fond au survol */
+}
+
+
 /* -----------------------------------------------------Footer-------------------------------------------------- */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 35px;
+    background-color: #333; /* Couleur de fond du footer */
+    color: #fff; /* Couleur du texte du footer */
+    padding: 20px;
     text-align: center;
-    bottom: 0; /* Aligner le footer en bas de la page */
     height: 100px;
 }
-
 
 .footer-nav ul {
     list-style-type: none;
@@ -156,3 +142,4 @@ footer {
     text-decoration: none;
     color: #fff;
 }
+

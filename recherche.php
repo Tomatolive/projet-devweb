@@ -35,7 +35,7 @@
             <h2>Vous recherchez un profil ?</h2>
             <form action="resultatsRecherche.php" method="post">
                 <input type="text" name="pseudonyme" placeholder="Pseudonyme" required>
-                <input type="submit" value="Rechercher">
+                <input id="modif" type="submit" value="Rechercher">
             </form>
         </main>
         <footer>

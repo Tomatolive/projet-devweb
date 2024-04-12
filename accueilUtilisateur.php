@@ -31,11 +31,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Accueil</title>
+        <meta charset="utf-8">
+        <title>Page de connexion</title>
+        <link rel="stylesheet" href="css/acceuilUtilisateur.css">
     </head>
     <body>
-        <div class="titre">
-            <h1 id="accueil">Accueil utilisateur</h1>
+        <header>
+    <div>
+        <a href="accueilUtilisateur.php">
+            <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+        </a>
+        <h1>StarLove</h1>
+    </div>
+    <!-- Onglets à droite -->
+    <div id="onglets">
+        <ul>
+            <li><a href="profil.php">Profil</a></li>
+            <li><a href="connexion.php">Déconnexion</a></li>
+        </ul>
+    </div>
+</header>
+
+        <main>
+                <h2>discuter avec vos futurs partenaires</h2>
+                <li><a href="abonnement.php">S'abboner</a></li>
+        </main>
+
+        <footer>
+        <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
         </div>
+        <div class="copyright">
+            <p>&copy; 2024 Site de Rencontre - Tous droits réservés</p>
+        </div>
+    </footer>
     </body>
 </html>

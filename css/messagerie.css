@@ -76,7 +76,7 @@ main {
 .conversation{
     display: inline-block;
     padding: 10px 20px; /* Espacement interne */
-    background-color: #bd14ba; /* Couleur de fond */
+    background-color: #ca16ee; /* Couleur de fond */
     border: none; /* Supprime la bordure */
     border-radius: 5px; /* Coins arrondis */
     cursor: pointer; /* Curseur pointeur */
@@ -85,6 +85,23 @@ main {
 .conversation a{
     text-decoration: none;
     color: #fff; /* Couleur du texte */
+}
+#modif {
+    display: inline-block;
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #fff; /* Couleur de fond */
+    color: #000; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur de fond */
+    width: 220px; /* Largeur du bouton */
+    height: 50px; /* Hauteur du bouton */
+    font-size: 20px; /* Taille du texte */
+}
+#modif:hover {
+    background-color: #6e004a; /* Couleur de fond au survol */
 }
 /* -----------------------------------------------------Footer-------------------------------------------------- */
 footer {
