@@ -41,7 +41,7 @@
     <main>
         <div class="infoClassique">
             <?php
-                echo "<img src='".$usager->getImage()."' alt='Photo de profil :' id='photoProfil'>";
+                echo "<img src='".$usager->getImage()."' alt='Photo de profil' id='photoProfil'>";
                 echo "<p>Nom : ".$usager->getNom()."</p>";
                 echo "<p>Prénom : ".$usager->getPrenom()."</p>";
                 echo "<p>Signe astrologique : ".$usager->getZodiaque()."</p>";
