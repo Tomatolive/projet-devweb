@@ -36,7 +36,9 @@
 <body>
 <header>
     <div>
+    <a href="accueilUtilisateur.php">
         <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
+    </a>
         <h1>StarLove</h1>
     </div>
         <div id="boutons">
@@ -51,7 +53,7 @@
             <li><a href="profil.php">Profil</a></li>
             <li><a href="recherche.php">Recherche</a></li>
             <li><a href="messagerie/messagerie.php">Messages</a></li>
-            <li><a href="#">Qui a vu mon profil</a></li>
+            <li><a href="vuProfil.php">Qui a vu mon profil</a></li>
             <li><a href="connexion.php">Déconnexion</a></li>
         </ul>
     </div>
