@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            <a href="accueilAdmin">
+            <a href="accueilAdmin.php">
                 <img src="css/img/logo.png" alt="Logo du site" id="LogoSite">
             </a>
             <h1>StarLove</h1>
