@@ -43,8 +43,8 @@
     </div>
         <div id="boutons">
         <ul>
-            <li><a href="#"> Gestion des messages</a></li>
-            <li><a href="#">Gestion des profils</a></li>
+            <li><a href="gestionMessages.php">Gestion des messages</a></li>
+            <li><a href="gestionProfils.php">Gestion des profils</a></li>
         </ul>
     </div>
     <!-- Onglets à droite -->
