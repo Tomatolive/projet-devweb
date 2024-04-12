@@ -6,6 +6,7 @@
         header('Location: connexion.php');
         exit();
     }    
+    $usager = unserialize($_SESSION['usager']);
 ?>
 <html>
     <head>
@@ -66,6 +67,14 @@
                     }
                     if(!$res) {
                         echo "<p>Aucun résultat ne correspond à votre recherche.</p>";
+                    } else {
+                        if($stmt2 = $mysqli->prepare("INSERT INTO Recherche (chercheur, recherche) VALUES (?, ?)")) {
+                            $chercheur = $mysqli->real_escape_string($usager->getLogin());
+                            $recherche = $mysqli->real_escape_string($login);
+                            $stmt2->bind_param("ss", $chercheur, $recherche);
+                            $stmt2->execute();
+                            $stmt2->close();
+                        }
                     }
                     $stmt->close();
                 }

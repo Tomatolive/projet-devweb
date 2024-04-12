@@ -53,6 +53,15 @@ CREATE TABLE Signalement (
     FOREIGN KEY (signale) REFERENCES Usager(login)
 );
 
+CREATE TABLE Recherche (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    date_recherche DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    chercheur VARCHAR(100) NOT NULL,
+    recherche VARCHAR(100) NOT NULL,
+    FOREIGN KEY (chercheur) REFERENCES Usager(login),
+    FOREIGN KEY (recherche) REFERENCES Usager(login)
+);
+
 INSERT INTO Usager (login, mdp, profil) VALUES ('admin', '$2y$10$HYf7YjR381BoEnxEMzswCefyKtwJfCTHJ2eiM6esPM3F88GnWK6ke', 'admin');
 INSERT INTO Usager (login, mdp, sexe, date_inscription, profil) VALUES ('oliviertamon', '$2y$10$U6kfsomBKVicBz1ROslHkuT6KbUyCjaEawkPpoPKC.d1FfrDCGVYS', 'H', CURDATE(), 'abonne');
 INSERT INTO Usager (login, mdp, sexe, date_inscription, date_fin_abonnement, profil) VALUES ('thomasllasera', '$2y$10$U6kfsomBKVicBz1ROslHkuT6KbUyCjaEawkPpoPKC.d1FfrDCGVYS', 'H', CURDATE(), '2024-12-31', 'abonne');
