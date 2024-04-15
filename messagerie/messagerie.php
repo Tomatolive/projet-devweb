@@ -42,7 +42,7 @@
                     echo '<li><a href="../profil.php">Profil</a></li>';
                     echo '<li><a href="../recherche.php">Recherche</a></li>';
                     echo '<li><a href="messagerie.php">Messages</a></li>';
-                    echo '<li><a href="vuProfil.php">Qui a vu mon profil</a></li>';
+                    echo '<li><a href="../vuProfil.php">Qui a vu mon profil</a></li>';
                     echo '<li><a href="../connexion.php">Déconnexion</a></li>';
                 }
             ?>
@@ -80,7 +80,7 @@
 
             if(!isset($_SESSION["admin"])) {
                 echo "<form action=\"contacter.php\" method=\"post\">";
-                echo "<input type=\"hidden\" name=\"profil\" value=\"admin\"></input>";
+                echo "<input type=\"hidden\" name=\"destinataire4\" value=\"admin\"></input>";
                 echo "<input id=\"modif\" type=\"submit\" value=\"Contacter un admin\"></input>";
                 echo "</form>";
             }
